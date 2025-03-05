@@ -49,20 +49,20 @@ export default function AboutPage() {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative py-20 overflow-hidden md:py-32">
+        <div className="container relative z-10 px-4 mx-auto">
           <div className="max-w-3xl">
             <motion.h1
-              className="text-4xl md:text-5xl font-bold mb-6"
+              className="mb-6 text-4xl font-bold md:text-5xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              About MOSKILL NETTING SOLUTIONS
+              About Us
             </motion.h1>
 
             <motion.p
-              className="text-lg md:text-xl mb-8 text-gray-100"
+              className="mb-8 text-lg text-gray-100 md:text-xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -76,20 +76,20 @@ export default function AboutPage() {
 
       {/* Our Story Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div className="container px-4 mx-auto">
+          <div className="grid items-center grid-cols-1 gap-12 md:grid-cols-2">
             <div>
-              <h2 className="text-3xl font-bold mb-6">Our Story</h2>
-              <p className="text-gray-600 mb-4">
+              <h2 className="mb-6 text-3xl font-bold">Our Legacy</h2>
+              <p className="mb-4 text-gray-600">
                 MOSKILL NETTING SOLUTIONS was founded in 2011 with a simple mission: to provide high-quality insect
                 protection solutions that effectively protect homes while maximizing ventilation and enhancing
                 aesthetics.
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="mb-4 text-gray-600">
                 What started as a small operation in Kalwa has grown into a trusted name in the industry, serving
                 thousands of satisfied customers across Maharashtra, Goa, and Gujarat.
               </p>
-              <p className="text-gray-600 mb-4">
+              <p className="mb-4 text-gray-600">
                 Our commitment to quality, innovation, and customer satisfaction has been the cornerstone of our
                 success. We take pride in our work and strive to exceed customer expectations with every installation.
               </p>
@@ -113,15 +113,15 @@ export default function AboutPage() {
 
       {/* Our Values Section */}
       <section ref={valuesRef} className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Core Values</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+        <div className="container px-4 mx-auto">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">Our Core Values</h2>
+            <p className="max-w-2xl mx-auto text-gray-600">
               These principles guide everything we do and help us deliver exceptional service to our customers.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 icon: <Shield className="text-white" size={28} />,
@@ -161,15 +161,15 @@ export default function AboutPage() {
             ].map((value, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-lg card-hover"
+                className="p-6 bg-white rounded-lg shadow-lg card-hover"
                 initial={{ opacity: 0, y: 50 }}
                 animate={isValuesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
               >
-                <div className="w-14 h-14 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mb-6">
+                <div className="flex items-center justify-center mb-6 rounded-full w-14 h-14 bg-gradient-to-r from-pink-500 to-purple-600">
                   {value.icon}
                 </div>
-                <h3 className="text-xl font-bold mb-3">{value.title}</h3>
+                <h3 className="mb-3 text-xl font-bold">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
               </motion.div>
             ))}
@@ -179,20 +179,20 @@ export default function AboutPage() {
 
       {/* Our History Timeline */}
       <section ref={historyRef} className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Journey</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+        <div className="container px-4 mx-auto">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">Our Journey</h2>
+            <p className="max-w-2xl mx-auto text-gray-600">
               From humble beginnings to becoming a trusted name in the industry, here's how our story unfolded.
             </p>
           </div>
 
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-pink-500 to-purple-600"></div>
+            <div className="absolute w-1 h-full transform -translate-x-1/2 left-1/2 bg-gradient-to-b from-pink-500 to-purple-600"></div>
 
             {/* Timeline items */}
-            <div className="space-y-12">
+            <div className="space-y-3">
               {[
                 {
                   year: "2011",
@@ -235,12 +235,12 @@ export default function AboutPage() {
                 <div key={index} className={`timeline-item flex ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}>
                   <div className="w-1/2"></div>
                   <div className="relative flex items-center justify-center">
-                    <div className="h-8 w-8 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 z-10"></div>
+                    <div className="z-10 w-8 h-8 rounded-full bg-gradient-to-r from-pink-500 to-purple-600"></div>
                   </div>
                   <div className="w-1/2 p-4">
-                    <div className="bg-white p-6 rounded-lg shadow-lg">
+                    <div className="p-6 bg-white rounded-lg shadow-lg">
                       <span className="text-sm font-bold text-primary">{item.year}</span>
-                      <h3 className="text-xl font-bold mb-2">{item.title}</h3>
+                      <h3 className="mb-2 text-xl font-bold">{item.title}</h3>
                       <p className="text-gray-600">{item.description}</p>
                     </div>
                   </div>
@@ -253,62 +253,52 @@ export default function AboutPage() {
 
       {/* Team Section */}
       <section ref={teamRef} className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Team</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Meet the dedicated professionals who make our success possible.
-            </p>
+        <div className="container px-4 mx-auto">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">Our Team</h2>
+            <p className="max-w-2xl mx-auto text-gray-600">Meet the dedicated professional who leads our success.</p>
           </div>
+
           <div className="flex justify-center">
-          <div className="grid grid-cols-1 gap-8">
-            {[
-              {
-                name: "Pranay Pawar",
-                position: "Founder & CEO",
-                bio: "With over 15 years of experience in the industry, Pranay leads our team with passion and expertise in insect protection solutions.",
-                image: "/placeholder.svg?height=400&width=400",
-              }
-            ].map((member, index) => (
-              <motion.div
-                key={index}
-                className="bg-white rounded-lg overflow-hidden shadow-lg card-hover"
-                initial={{ opacity: 0, y: 50 }}
-                animate={isTeamInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-              >
-                <div className="relative h-80">
-                  <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-primary mb-3">{member.position}</p>
-                  <p className="text-gray-600">{member.bio}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+            <motion.div
+              className="max-w-sm overflow-hidden bg-white rounded-lg shadow-lg card-hover"
+              initial={{ opacity: 0, y: 50 }}
+              animate={isTeamInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="relative h-80">
+                <Image src="/placeholder.svg?height=400&width=400" alt="Pranay Pawar" fill className="object-cover" />
+              </div>
+              <div className="p-6">
+                <h3 className="mb-1 text-xl font-bold">Pranay Pawar</h3>
+                <p className="mb-3 text-primary">Founder & CEO</p>
+                <p className="text-gray-600">
+                  With over 15 years of experience in the industry, Pranay leads our team with passion and expertise in
+                  insect protection solutions.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Service Area Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Service Areas</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+        <div className="container px-4 mx-auto">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">Our Service Areas</h2>
+            <p className="max-w-2xl mx-auto text-gray-600">
               We provide our premium insect protection solutions across Western India.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center card-hover">
-              <h3 className="text-2xl font-bold mb-4">Maharashtra</h3>
-              <p className="text-gray-600 mb-4">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div className="p-6 text-center bg-white rounded-lg shadow-lg card-hover">
+              <h3 className="mb-4 text-2xl font-bold">Maharashtra</h3>
+              <p className="mb-4 text-gray-600">
                 Serving Mumbai, Thane, Pune, Nashik, Nagpur, and all major cities across Maharashtra.
               </p>
-              <div className="relative h-40 rounded-lg overflow-hidden">
+              <div className="relative h-40 overflow-hidden rounded-lg">
                 <Image
                   src="/placeholder.svg?height=300&width=500"
                   alt="Maharashtra Service Area"
@@ -318,12 +308,12 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center card-hover">
-              <h3 className="text-2xl font-bold mb-4">Goa</h3>
-              <p className="text-gray-600 mb-4">
+            <div className="p-6 text-center bg-white rounded-lg shadow-lg card-hover">
+              <h3 className="mb-4 text-2xl font-bold">Goa</h3>
+              <p className="mb-4 text-gray-600">
                 Providing our services in Panaji, Margao, Vasco da Gama, and surrounding areas.
               </p>
-              <div className="relative h-40 rounded-lg overflow-hidden">
+              <div className="relative h-40 overflow-hidden rounded-lg">
                 <Image
                   src="/placeholder.svg?height=300&width=500"
                   alt="Goa Service Area"
@@ -333,12 +323,12 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center card-hover">
-              <h3 className="text-2xl font-bold mb-4">Gujarat</h3>
-              <p className="text-gray-600 mb-4">
+            <div className="p-6 text-center bg-white rounded-lg shadow-lg card-hover">
+              <h3 className="mb-4 text-2xl font-bold">Gujarat</h3>
+              <p className="mb-4 text-gray-600">
                 Serving Ahmedabad, Surat, Vadodara, Rajkot, and other major cities in Gujarat.
               </p>
-              <div className="relative h-40 rounded-lg overflow-hidden">
+              <div className="relative h-40 overflow-hidden rounded-lg">
                 <Image
                   src="/placeholder.svg?height=300&width=500"
                   alt="Gujarat Service Area"
@@ -353,10 +343,10 @@ export default function AboutPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl p-8 md:p-12 text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Let's Work Together</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
+        <div className="container px-4 mx-auto">
+          <div className="p-8 text-center text-white bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl md:p-12">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">Let's Work Together</h2>
+            <p className="max-w-2xl mx-auto mb-8 text-xl">
               Ready to enhance your home with our premium mosquito nets, grills, or blinds? Contact us today for a
               consultation.
             </p>
@@ -369,4 +359,3 @@ export default function AboutPage() {
     </div>
   )
 }
-

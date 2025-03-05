@@ -1,12 +1,14 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Playfair_Display, Bebas_Neue } from "next/font/google"
 import "./globals.css"
 import { Navbar } from "@/src/components/navbar"
 import { Footer } from "@/src/components/footer"
 import { Toaster } from "@/src/components/ui/toaster"
+import { QuotePopup } from "../components/quote-form"
 
-const inter = Inter({ subsets: ["latin"] })
+// const inter = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
+const inter = Playfair_Display({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 export const metadata: Metadata = {
   title: "MOSKILL NETTING SOLUTIONS - Premium Mosquito Nets & Grills",
@@ -22,14 +24,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} min-h-screen bg-gradient-to-br from-pink-400 via-purple-500 to-pink-500`}>
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen ">
           <Navbar />
           <main className="flex-grow">{children}</main>
           <Footer />
           <Toaster />
+          <QuotePopup/>
         </div>
       </body>
     </html>
   )
 }
-

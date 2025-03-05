@@ -7,7 +7,7 @@ import { motion, useInView } from "framer-motion"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Button } from "@/src/components/ui/button"
-import { CheckCircle, Maximize2, ArrowUpDown, Bird, Lock, Layers, Paintbrush } from "lucide-react"
+import { CheckCircle, Maximize2, ArrowUpDown, Bird, Lock, Layers, Paintbrush } from 'lucide-react'
 
 // Register ScrollTrigger plugin
 if (typeof window !== "undefined") {
@@ -18,7 +18,7 @@ export default function ServicesPage() {
   const servicesRef = useRef<HTMLDivElement>(null)
   const processRef = useRef<HTMLDivElement>(null)
   const faqRef = useRef<HTMLDivElement>(null)
-
+  
   const isServicesInView = useInView(servicesRef, { once: true, amount: 0.2 })
   const isProcessInView = useInView(processRef, { once: true, amount: 0.2 })
 
@@ -26,7 +26,7 @@ export default function ServicesPage() {
     // Services animation
     if (servicesRef.current) {
       const serviceItems = servicesRef.current.querySelectorAll(".service-item")
-
+      
       serviceItems.forEach((item, index) => {
         gsap.fromTo(
           item,
@@ -40,7 +40,7 @@ export default function ServicesPage() {
               trigger: item,
               start: "top 80%",
             },
-          },
+          }
         )
       })
     }
@@ -60,7 +60,7 @@ export default function ServicesPage() {
         "Aluminum frames (powder-coated/anodized) for durability",
         "90% ventilation and natural light optimization",
       ],
-      icon: <Maximize2 className="text-primary mr-3 mt-1" size={24} />,
+      icon: <Maximize2 className="mt-1 mr-3 text-primary" size={24} />,
       image: "/placeholder.svg?height=600&width=800",
     },
     {
@@ -76,7 +76,7 @@ export default function ServicesPage() {
         "High-quality mesh that's tear-resistant",
         "Professional installation for perfect fitting",
       ],
-      icon: <ArrowUpDown className="text-primary mr-3 mt-1" size={24} />,
+      icon: <ArrowUpDown className="mt-1 mr-3 text-primary" size={24} />,
       image: "/placeholder.svg?height=600&width=800",
     },
     {
@@ -92,7 +92,7 @@ export default function ServicesPage() {
         "Humane bird deterrent solution",
         "Professional installation with minimal disruption",
       ],
-      icon: <Bird className="text-primary mr-3 mt-1" size={24} />,
+      icon: <Bird className="mt-1 mr-3 text-primary" size={24} />,
       image: "/placeholder.svg?height=600&width=800",
     },
     {
@@ -108,7 +108,7 @@ export default function ServicesPage() {
         "Custom designs to match your home's architecture",
         "Professional installation with proper anchoring",
       ],
-      icon: <Lock className="text-primary mr-3 mt-1" size={24} />,
+      icon: <Lock className="mt-1 mr-3 text-primary" size={24} />,
       image: "/placeholder.svg?height=600&width=800",
     },
     {
@@ -124,7 +124,7 @@ export default function ServicesPage() {
         "Cost-effective insect protection solution",
         "Available in multiple colors to match your decor",
       ],
-      icon: <Layers className="text-primary mr-3 mt-1" size={24} />,
+      icon: <Layers className="mt-1 mr-3 text-primary" size={24} />,
       image: "/placeholder.svg?height=600&width=800",
     },
     {
@@ -140,7 +140,7 @@ export default function ServicesPage() {
         "Professional installation for perfect fitting",
         "Adds style and functionality to any room",
       ],
-      icon: <Paintbrush className="text-primary mr-3 mt-1" size={24} />,
+      icon: <Paintbrush className="mt-1 mr-3 text-primary" size={24} />,
       image: "/placeholder.svg?height=600&width=800",
     },
   ]
@@ -182,7 +182,7 @@ export default function ServicesPage() {
     {
       question: "Do you offer warranties on your products?",
       answer:
-        "Yes, all our products come with warranties. Mosquito nets typically have a 1-year warranty, while window grills and blinds come with 2-3 year warranties depending on the material and type. Our team will provide detailed warranty information for your specific purchase.",
+        "Yes, all our products come with technical warranties. The warranty period varies depending on the product type and material. Our team will provide detailed warranty information specific to your purchase.",
     },
     {
       question: "What is the difference between horizontal and vertical mosquito nets?",
@@ -204,26 +204,25 @@ export default function ServicesPage() {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative py-20 overflow-hidden md:py-32">
+        <div className="container relative z-10 px-4 mx-auto">
           <div className="max-w-3xl">
-            <motion.h1
-              className="text-4xl md:text-5xl font-bold mb-6"
+            <motion.h1 
+              className="mb-6 text-4xl font-bold md:text-5xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
               Our Services
             </motion.h1>
-
-            <motion.p
-              className="text-lg md:text-xl mb-8 text-gray-100"
+            
+            <motion.p 
+              className="mb-8 text-lg text-gray-100 md:text-xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Discover our comprehensive range of high-quality insect protection solutions designed to enhance your
-              living space while keeping it insect-free.
+              Discover our comprehensive range of high-quality insect protection solutions designed to enhance your living space while keeping it insect-free.
             </motion.p>
           </div>
         </div>
@@ -231,45 +230,32 @@ export default function ServicesPage() {
 
       {/* Services Section */}
       <section ref={servicesRef} className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="space-y-24">
+        <div className="container px-4 mx-auto">
+          <div className="grid grid-cols-1 gap-6 px-4 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
             {services.map((service, index) => (
-              <div
-                key={service.id}
-                id={service.id}
-                className={`service-item grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
-                }`}
+              <motion.div
+                key={index}
+                className="w-full overflow-hidden bg-white rounded-lg shadow-lg card-hover"
+                initial={{ opacity: 0, y: 50 }}
+                animate={isServicesInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
               >
-                <div className={index % 2 === 1 ? "lg:col-start-2" : ""}>
-                  <div className="flex items-center mb-4">
-                    {service.icon}
-                    <h2 className="text-3xl font-bold">{service.title}</h2>
-                  </div>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
-
-                  <div className="space-y-3 mb-8">
-                    {service.features.map((feature, i) => (
-                      <div key={i} className="flex items-start">
-                        <CheckCircle className="text-primary mt-1 mr-2 h-5 w-5 flex-shrink-0" />
-                        <p className="text-gray-600">{feature}</p>
-                      </div>
-                    ))}
-                  </div>
-
-                  <Button variant="gradient" asChild>
-                    <Link href="/contact">Get a Quote</Link>
-                  </Button>
+                <div className="relative w-full h-48 sm:h-52 md:h-60">
+                  <Image src={service.image} alt={service.title} fill className="object-cover" />
                 </div>
-
-                <div
-                  className={`relative h-[400px] rounded-lg overflow-hidden shadow-xl ${
-                    index % 2 === 1 ? "lg:col-start-1" : ""
-                  }`}
-                >
-                  <Image src={service.image || "/placeholder.svg"} alt={service.title} fill className="object-cover" />
+                <div className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-purple-600">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-lg font-bold">{service.title}</h3>
+                  </div>
+                  <p className="text-gray-600">{service.description}</p>
+                  {/* <Link href={service.link} className="inline-block mt-4 font-semibold text-indigo-600">
+                    Learn More →
+                  </Link> */}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -277,65 +263,63 @@ export default function ServicesPage() {
 
       {/* Process Section */}
       <section ref={processRef} className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Process</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              We follow a streamlined process to ensure a smooth experience from consultation to installation.
-            </p>
-          </div>
+      <div className="container px-4 mx-auto">
+        <div className="mb-16 text-center">
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl">Our Process</h2>
+          <p className="max-w-2xl mx-auto text-gray-600">
+            We follow a streamlined process to ensure a smooth experience from consultation to installation.
+          </p>
+        </div>
 
-          <div className="relative">
-            {/* Process line */}
-            <div className="hidden md:block absolute left-1/2 top-12 bottom-12 transform -translate-x-1/2 w-1 bg-gradient-to-b from-pink-500 to-purple-600"></div>
+        <div className="relative">
+          {/* Timeline Line (Desktop View) */}
+          <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-pink-500 to-purple-600 transform -translate-x-1/2"></div>
 
-            <div className="space-y-12 md:space-y-0">
-              {processSteps.map((step, index) => (
+          {/* Process Steps */}
+          <div className="space-y-2">
+            {processSteps.map((step, index) => (
+              <div key={index} className={`timeline-item flex ${index % 2 === 0 ? "flex-row-reverse" : "flex-row"}`}>
+                {/* Empty column for alignment (Desktop) */}
+                <div className="hidden w-1/2 md:block"></div>
+
+                {/* Timeline Dot */}
+                <div className="relative flex items-center justify-center">
+                  <div className="z-10 w-8 h-8 rounded-full bg-gradient-to-r from-pink-500 to-purple-600"></div>
+                </div>
+
+                {/* Step Content */}
                 <motion.div
-                  key={index}
-                  className="md:grid md:grid-cols-2 md:gap-8 items-center"
+                  className="w-full p-4 md:w-1/2"
                   initial={{ opacity: 0, y: 50 }}
                   animate={isProcessInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                 >
-                  <div className={`relative ${index % 2 === 0 ? "md:text-right" : "md:col-start-2"}`}>
-                    <div className="bg-white p-6 rounded-lg shadow-lg">
-                      <span className="text-4xl font-bold text-gradient">{step.number}</span>
-                      <h3 className="text-xl font-bold mt-2 mb-3">{step.title}</h3>
-                      <p className="text-gray-600">{step.description}</p>
-                    </div>
-
-                    {/* Circle on the timeline */}
-                    <div
-                      className="hidden md:block absolute top-1/2 transform -translate-y-1/2 w-8 h-8 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 z-10 
-                      ${index % 2 === 0 ? 'right-0 translate-x-1/2' : 'left-0 -translate-x-1/2'}"
-                    ></div>
+                  <div className="p-6 bg-white rounded-lg shadow-lg">
+                    <span className="text-4xl font-bold text-gradient">{step.number}</span>
+                    <h3 className="mt-2 mb-3 text-xl font-bold">{step.title}</h3>
+                    <p className="text-gray-600">{step.description}</p>
                   </div>
-
-                  {/* Empty column for layout */}
-                  <div className={`hidden md:block ${index % 2 === 0 ? "md:col-start-2" : ""}`}></div>
                 </motion.div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       {/* FAQ Section */}
       <section ref={faqRef} className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Find answers to common questions about our products and services.
-            </p>
+        <div className="container px-4 mx-auto">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">Frequently Asked Questions</h2>
+            <p className="max-w-2xl mx-auto text-gray-600">Find answers to common questions about our products and services.</p>
           </div>
-
+          
           <div className="max-w-3xl mx-auto">
             <div className="space-y-6">
               {faqs.map((faq, index) => (
-                <div key={index} className="bg-gray-50 rounded-lg p-6 shadow-sm">
-                  <h3 className="text-xl font-bold mb-3">{faq.question}</h3>
+                <div key={index} className="p-6 rounded-lg shadow-sm bg-gray-50">
+                  <h3 className="mb-3 text-xl font-bold">{faq.question}</h3>
                   <p className="text-gray-600">{faq.answer}</p>
                 </div>
               ))}
@@ -346,13 +330,10 @@ export default function ServicesPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl p-8 md:p-12 text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Contact us today for a free consultation and quote. Let us help you protect your home with our premium
-              solutions.
-            </p>
+        <div className="container px-4 mx-auto">
+          <div className="p-8 text-center text-white bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl md:p-12">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">Ready to Get Started?</h2>
+            <p className="max-w-2xl mx-auto mb-8 text-xl">Contact us today for a free consultation and quote. Let us help you protect your home with our premium solutions.</p>
             <Button size="xl" className="bg-white text-primary hover:bg-gray-100" asChild>
               <Link href="/contact">Contact Us Now</Link>
             </Button>
@@ -362,4 +343,3 @@ export default function ServicesPage() {
     </div>
   )
 }
-

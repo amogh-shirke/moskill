@@ -8,6 +8,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Button } from "@/src/components/ui/button"
 import { Shield, Star, Award, CheckCircle, Maximize2, ArrowUpDown, Bird, Lock, Layers, Paintbrush } from "lucide-react"
+import HeroSlider from "@/src/components/hero-slider"
 
 // Register ScrollTrigger plugin
 if (typeof window !== "undefined") {
@@ -61,20 +62,14 @@ export default function Home() {
       {/* Hero Section */}
       <section ref={heroRef} className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-black/40 z-10" />
-          <Image
-            src="/placeholder.svg?height=1080&width=1920"
-            alt="Moskill Netting Solutions"
-            fill
-            className="object-cover"
-            priority
-          />
+          <div className="absolute inset-0 z-10 bg-black/40" />
+          <HeroSlider />
         </div>
 
-        <div className="container mx-auto px-4 relative z-20 hero-content">
+        <div className="container relative z-20 px-4 mx-auto hero-content">
           <div className="max-w-3xl mx-auto text-center text-white">
             <motion.h1
-              className="text-4xl md:text-6xl font-bold mb-6"
+              className="mb-6 text-4xl font-bold md:text-6xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -83,7 +78,7 @@ export default function Home() {
             </motion.h1>
 
             <motion.p
-              className="text-lg md:text-xl mb-8 text-gray-100"
+              className="mb-8 text-lg text-gray-100 md:text-xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -93,7 +88,7 @@ export default function Home() {
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex flex-col justify-center gap-4 sm:flex-row"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
@@ -104,7 +99,7 @@ export default function Home() {
               <Button
                 variant="outline"
                 size="xl"
-                className="bg-white/20 backdrop-blur-sm border-white text-white hover:bg-white/30"
+                className="text-white border-white bg-white/20 backdrop-blur-sm hover:bg-white/30"
                 asChild
               >
                 <Link href="/services">Explore Services</Link>
@@ -116,47 +111,47 @@ export default function Home() {
 
       {/* Features Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose MOSKILL?</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+        <div className="container px-4 mx-auto">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">Why Choose MOSKILL?</h2>
+            <p className="max-w-2xl mx-auto text-gray-600">
               We provide premium quality insect protection solutions with professional installation and excellent
               customer service.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg card-hover">
-              <div className="w-14 h-14 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mb-6">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div className="p-6 bg-white rounded-lg shadow-lg card-hover">
+              <div className="flex items-center justify-center mb-6 rounded-full w-14 h-14 bg-gradient-to-r from-pink-500 to-purple-600">
                 <Shield className="text-white" size={28} />
               </div>
-              <h3 className="text-xl font-bold mb-3">Premium Quality</h3>
+              <h3 className="mb-3 text-xl font-bold">Premium Quality</h3>
               <p className="text-gray-600">We use only the highest quality materials for durability and performance.</p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-lg card-hover">
-              <div className="w-14 h-14 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mb-6">
+            <div className="p-6 bg-white rounded-lg shadow-lg card-hover">
+              <div className="flex items-center justify-center mb-6 rounded-full w-14 h-14 bg-gradient-to-r from-pink-500 to-purple-600">
                 <Star className="text-white" size={28} />
               </div>
-              <h3 className="text-xl font-bold mb-3">Expert Installation</h3>
+              <h3 className="mb-3 text-xl font-bold">Expert Installation</h3>
               <p className="text-gray-600">
                 Our skilled technicians ensure perfect fitting and installation every time.
               </p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-lg card-hover">
-              <div className="w-14 h-14 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mb-6">
+            <div className="p-6 bg-white rounded-lg shadow-lg card-hover">
+              <div className="flex items-center justify-center mb-6 rounded-full w-14 h-14 bg-gradient-to-r from-pink-500 to-purple-600">
                 <Award className="text-white" size={28} />
               </div>
-              <h3 className="text-xl font-bold mb-3">12+ Years Experience</h3>
+              <h3 className="mb-3 text-xl font-bold">12+ Years Experience</h3>
               <p className="text-gray-600">With over a decade of experience, we've perfected our craft and service.</p>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-lg card-hover">
-              <div className="w-14 h-14 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mb-6">
+            <div className="p-6 bg-white rounded-lg shadow-lg card-hover">
+              <div className="flex items-center justify-center mb-6 rounded-full w-14 h-14 bg-gradient-to-r from-pink-500 to-purple-600">
                 <CheckCircle className="text-white" size={28} />
               </div>
-              <h3 className="text-xl font-bold mb-3">90% Ventilation</h3>
+              <h3 className="mb-3 text-xl font-bold">90% Ventilation</h3>
               <p className="text-gray-600">
                 Our solutions optimize airflow and natural light while keeping insects out.
               </p>
@@ -167,16 +162,16 @@ export default function Home() {
 
       {/* Services Section */}
       <section ref={servicesRef} className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+        <div className="container px-4 mx-auto sm:px-6">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">Our Services</h2>
+            <p className="max-w-2xl mx-auto text-gray-600">
               Explore our range of high-quality products and services designed to protect your home and enhance your
               living space.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
             {[
               {
                 title: "Horizontal Mosquito Net",
@@ -203,7 +198,7 @@ export default function Home() {
                 link: "/services#bird-netting",
               },
               {
-                title: "Invisible Grills (SS316)",
+                title: "Invisible Grills",
                 description:
                   "High-strength stainless steel grills that provide security without compromising on aesthetics or views.",
                 image: "/placeholder.svg?height=600&width=800",
@@ -229,20 +224,20 @@ export default function Home() {
             ].map((service, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-lg overflow-hidden shadow-lg card-hover"
+                className="overflow-hidden bg-white rounded-lg shadow-lg card-hover"
                 initial={{ opacity: 0, y: 50 }}
                 animate={isServicesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
               >
-                <div className="relative h-60">
+                <div className="relative h-48 sm:h-52 md:h-60">
                   <Image src={service.image || "/placeholder.svg"} alt={service.title} fill className="object-cover" />
                 </div>
                 <div className="p-6">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mb-4">
+                  <div className="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-gradient-to-r from-pink-500 to-purple-600">
                     {service.icon}
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <h3 className="mb-3 text-xl font-bold">{service.title}</h3>
+                  <p className="mb-4 text-gray-600 line-clamp-3 sm:line-clamp-4">{service.description}</p>
                   <Button variant="link" className="p-0 text-primary" asChild>
                     <Link href={service.link}>Learn More →</Link>
                   </Button>
@@ -251,7 +246,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="mt-12 text-center">
             <Button variant="gradient" size="lg" asChild>
               <Link href="/services">View All Services</Link>
             </Button>
@@ -261,20 +256,20 @@ export default function Home() {
 
       {/* Product Features Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Product Features</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+        <div className="container px-4 mx-auto">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">Product Features</h2>
+            <p className="max-w-2xl mx-auto text-gray-600">
               Our products are designed with quality, functionality, and aesthetics in mind.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg card-hover">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <div className="p-6 bg-white rounded-lg shadow-lg card-hover">
               <div className="flex items-start mb-4">
-                <CheckCircle className="text-primary mr-3 mt-1" />
+                <CheckCircle className="mt-1 mr-3 text-primary" />
                 <div>
-                  <h3 className="text-lg font-bold mb-2">Custom-fit Insect Screens</h3>
+                  <h3 className="mb-2 text-lg font-bold">Custom-fit Insect Screens</h3>
                   <p className="text-gray-600">
                     Perfectly tailored screens for doors and windows of any size or shape.
                   </p>
@@ -282,11 +277,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-lg card-hover">
+            <div className="p-6 bg-white rounded-lg shadow-lg card-hover">
               <div className="flex items-start mb-4">
-                <CheckCircle className="text-primary mr-3 mt-1" />
+                <CheckCircle className="mt-1 mr-3 text-primary" />
                 <div>
-                  <h3 className="text-lg font-bold mb-2">Charcoal & Grey Mesh Options</h3>
+                  <h3 className="mb-2 text-lg font-bold">Charcoal & Grey Mesh Options</h3>
                   <p className="text-gray-600">
                     Multiple mesh colors for better visibility and seamless integration with your decor.
                   </p>
@@ -294,11 +289,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-lg card-hover">
+            <div className="p-6 bg-white rounded-lg shadow-lg card-hover">
               <div className="flex items-start mb-4">
-                <CheckCircle className="text-primary mr-3 mt-1" />
+                <CheckCircle className="mt-1 mr-3 text-primary" />
                 <div>
-                  <h3 className="text-lg font-bold mb-2">Aluminum Frames</h3>
+                  <h3 className="mb-2 text-lg font-bold">Aluminum Frames</h3>
                   <p className="text-gray-600">
                     Powder-coated or anodized aluminum frames for durability and weather resistance.
                   </p>
@@ -306,11 +301,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-lg card-hover">
+            <div className="p-6 bg-white rounded-lg shadow-lg card-hover">
               <div className="flex items-start mb-4">
-                <CheckCircle className="text-primary mr-3 mt-1" />
+                <CheckCircle className="mt-1 mr-3 text-primary" />
                 <div>
-                  <h3 className="text-lg font-bold mb-2">Easy-to-Install Mechanisms</h3>
+                  <h3 className="mb-2 text-lg font-bold">Easy-to-Install Mechanisms</h3>
                   <p className="text-gray-600">
                     Retractable mechanisms for convenience and ease of use in daily operation.
                   </p>
@@ -318,11 +313,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-lg card-hover">
+            <div className="p-6 bg-white rounded-lg shadow-lg card-hover">
               <div className="flex items-start mb-4">
-                <CheckCircle className="text-primary mr-3 mt-1" />
+                <CheckCircle className="mt-1 mr-3 text-primary" />
                 <div>
-                  <h3 className="text-lg font-bold mb-2">90% Ventilation</h3>
+                  <h3 className="mb-2 text-lg font-bold">90% Ventilation</h3>
                   <p className="text-gray-600">
                     Our mesh allows maximum airflow and natural light while keeping insects out.
                   </p>
@@ -330,11 +325,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-lg shadow-lg card-hover">
+            <div className="p-6 bg-white rounded-lg shadow-lg card-hover">
               <div className="flex items-start mb-4">
-                <CheckCircle className="text-primary mr-3 mt-1" />
+                <CheckCircle className="mt-1 mr-3 text-primary" />
                 <div>
-                  <h3 className="text-lg font-bold mb-2">Durable Construction</h3>
+                  <h3 className="mb-2 text-lg font-bold">Durable Construction</h3>
                   <p className="text-gray-600">
                     Built to last with high-quality materials that withstand daily use and weather conditions.
                   </p>
@@ -347,15 +342,15 @@ export default function Home() {
 
       {/* Testimonials Section */}
       <section ref={testimonialsRef} className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+        <div className="container px-4 mx-auto">
+          <div className="mb-16 text-center">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">What Our Clients Say</h2>
+            <p className="max-w-2xl mx-auto text-gray-600">
               Don't just take our word for it. Here's what our satisfied customers have to say about our services.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {[
               {
                 name: "Priya Sharma",
@@ -381,7 +376,7 @@ export default function Home() {
             ].map((testimonial, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-lg"
+                className="p-6 bg-white rounded-lg shadow-lg"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={isTestimonialsInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -397,10 +392,10 @@ export default function Home() {
                       />
                     ))}
                 </div>
-                <p className="text-gray-600 mb-6 italic">"{testimonial.quote}"</p>
+                <p className="mb-6 italic text-gray-600">"{testimonial.quote}"</p>
                 <div>
                   <p className="font-bold">{testimonial.name}</p>
-                  <p className="text-gray-500 text-sm">{testimonial.location}</p>
+                  <p className="text-sm text-gray-500">{testimonial.location}</p>
                 </div>
               </motion.div>
             ))}
@@ -409,11 +404,11 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section ref={statsRef} className="py-20 bg-gradient-to-r from-pink-500 to-purple-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+      <section ref={statsRef} className="py-20 text-white bg-gradient-to-r from-pink-500 to-purple-600">
+        <div className="container px-4 mx-auto">
+          <div className="grid grid-cols-1 gap-8 text-center md:grid-cols-2 lg:grid-cols-4">
             <div>
-              <h3 className="text-4xl font-bold mb-2">
+              <h3 className="mb-2 text-4xl font-bold">
                 <span className="stat-counter" data-target="12">
                   0
                 </span>
@@ -422,7 +417,7 @@ export default function Home() {
               <p className="text-white/80">Years of Experience</p>
             </div>
             <div>
-              <h3 className="text-4xl font-bold mb-2">
+              <h3 className="mb-2 text-4xl font-bold">
                 <span className="stat-counter" data-target="1500">
                   0
                 </span>
@@ -431,7 +426,7 @@ export default function Home() {
               <p className="text-white/80">Happy Clients</p>
             </div>
             <div>
-              <h3 className="text-4xl font-bold mb-2">
+              <h3 className="mb-2 text-4xl font-bold">
                 <span className="stat-counter" data-target="3000">
                   0
                 </span>
@@ -440,7 +435,7 @@ export default function Home() {
               <p className="text-white/80">Projects Completed</p>
             </div>
             <div>
-              <h3 className="text-4xl font-bold mb-2">
+              <h3 className="mb-2 text-4xl font-bold">
                 <span className="stat-counter" data-target="98">
                   0
                 </span>
@@ -454,10 +449,10 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl p-8 md:p-12 text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
+        <div className="container px-4 mx-auto">
+          <div className="p-8 text-center text-white bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl md:p-12">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">Ready to Get Started?</h2>
+            <p className="max-w-2xl mx-auto mb-8 text-xl">
               Contact us today for a free consultation and quote. Let us help you protect your home with our premium
               solutions.
             </p>
