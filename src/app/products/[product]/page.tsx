@@ -30,7 +30,7 @@ const productData: { [key: string]: ProductData } = {
   "horizontal-mosquito-net": {
     name: "Horizontal Mosquito Net",
     tagline: "Elegant and space-efficient insect protection for large openings",
-    heroImage: "/images/horizontal-mosquito-net.jpg",
+    heroImage: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181642/uploads/ugokmsqkcnk7by6uevw2.webp",
     overview:
       "The Horizontal Mosquito Net is an elegant and space-efficient solution for keeping insects out while maintaining ventilation and natural light. It is best suited for large openings such as balconies, French windows, and sliding doors. This retractable net system operates smoothly on a horizontal track, making it a user-friendly and stylish choice for modern homes, offices, and commercial spaces.",
     features: [
@@ -49,9 +49,9 @@ const productData: { [key: string]: ProductData } = {
       maxSize: "Up to 20 feet center opening",
     },
     images: [
-      "/images/horizontal-mosquito-net-1.jpg",
-      "/images/horizontal-mosquito-net-2.jpg",
-      "/images/horizontal-mosquito-net-3.jpg",
+      "https://res.cloudinary.com/du3er2t49/image/upload/v1741181644/uploads/ruf55x4qkeotzumixwmz.webp",
+      "https://res.cloudinary.com/du3er2t49/image/upload/v1741181648/uploads/t5qz8jc0ige3jfjndbx5.webp",
+      " https://res.cloudinary.com/du3er2t49/image/upload/v1741181646/uploads/f8wajlcca6zd3y6dswor.webp",
     ],
     faqs: [
       {
@@ -85,7 +85,7 @@ const productData: { [key: string]: ProductData } = {
   "vertical-mosquito-net": {
     name: "Vertical Mosquito Net",
     tagline: "Effortless and sleek mosquito protection for windows and doors",
-    heroImage: "/images/vertical-mosquito-net.jpg",
+    heroImage: " https://res.cloudinary.com/du3er2t49/image/upload/v1741181655/uploads/enadthf13xqb90jaci2y.webp",
     overview:
       "The Vertical Mosquito Net is designed for easy operation and seamless integration into modern interiors. Ideal for windows and small openings, this net features a rolling mechanism that allows you to pull it down when needed and retract it effortlessly when not in use. Its durable mesh ensures long-term protection against insects while allowing natural airflow.",
     features: [
@@ -104,9 +104,9 @@ const productData: { [key: string]: ProductData } = {
       maxSize: "Up to 5 feet width and 6 feet height",
     },
     images: [
-      "/images/vertical-mosquito-net-1.jpg",
-      "/images/vertical-mosquito-net-2.jpg",
-      "/images/vertical-mosquito-net-3.jpg",
+      "https://res.cloudinary.com/du3er2t49/image/upload/v1741181657/uploads/syzbxk2ps2hxphu2du77.webp",
+      "https://res.cloudinary.com/du3er2t49/image/upload/v1741181659/uploads/moobiiaxxjq6fxzsh6qd.webp",
+      "https://res.cloudinary.com/du3er2t49/image/upload/v1741181661/uploads/raabwdqi56xxlrvtmtai.webp",
     ],
     faqs: [
       {
@@ -139,7 +139,7 @@ const productData: { [key: string]: ProductData } = {
   "bird-netting": {
     name: "Bird Netting",
     tagline: "Strong and durable protection against birds for open spaces",
-    heroImage: "/placeholder.svg?height=600&width=1200",
+    heroImage: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181634/uploads/z81lhge6mnjkvcdmu0f2.webp",
     overview:
       "Bird Netting is an effective solution to prevent birds from entering residential, commercial, and industrial spaces. Designed to be nearly invisible from a distance, this netting helps maintain cleanliness by keeping birds away from balconies, terraces, windows, and open spaces. Made from high-quality, weather-resistant material, our bird netting provides long-term protection while allowing proper airflow and visibility.",
     features: [
@@ -158,9 +158,9 @@ const productData: { [key: string]: ProductData } = {
       maxSize: "Customizable as per requirement",
     },
     images: [
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
+      "https://res.cloudinary.com/du3er2t49/image/upload/v1741181636/uploads/oucruqkspskmkl3arytc.webp",
+      "https://res.cloudinary.com/du3er2t49/image/upload/v1741181638/uploads/ghjrnxpw4w3nqrcviqko.webp",
+      "https://res.cloudinary.com/du3er2t49/image/upload/v1741181639/uploads/gxx3vq7dzye6sdatwvjd.webp",
     ],
     faqs: [
       {
@@ -194,7 +194,7 @@ const productData: { [key: string]: ProductData } = {
   "invisible-grills": {
     name: "Invisible Grills",
     tagline: "Modern and secure alternative to traditional safety grills",
-    heroImage: "/placeholder.svg?height=600&width=1200",
+    heroImage: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181649/uploads/y0qo2q7qdtvzsryfuhyy.webp",
     overview:
       "Invisible Grills provide a sleek and modern safety solution for balconies, windows, and open areas. Made from high-strength stainless steel cables, these grills offer maximum safety without obstructing the view. Designed for residential and commercial properties, invisible grills provide security while maintaining aesthetic appeal. They are rust-resistant, easy to maintain, and highly durable, making them an ideal alternative to bulky iron grills.",
     features: [
@@ -213,9 +213,9 @@ const productData: { [key: string]: ProductData } = {
       maxSize: "Customizable as per requirement",
     },
     images: [
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
+      " https://res.cloudinary.com/du3er2t49/image/upload/v1741181650/uploads/sqpxgppb2vja11aamxek.webp",
+      "https://res.cloudinary.com/du3er2t49/image/upload/v1741181652/uploads/k5wewqochsnwjr3q0w3d.webp",
+      "https://res.cloudinary.com/du3er2t49/image/upload/v1741181653/uploads/vzns2zucqldv3vjpptpl.webp",
     ],
     faqs: [
       {

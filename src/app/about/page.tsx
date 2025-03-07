@@ -101,7 +101,7 @@ export default function AboutPage() {
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/placeholder.svg?height=800&width=600"
+                src="https://res.cloudinary.com/du3er2t49/image/upload/v1741187119/uploads/durga-safety-nets-for-balconies-near-me-e1688731249701_1.webp"
                 alt="MOSKILL NETTING SOLUTIONS Team"
                 fill
                 className="object-cover"

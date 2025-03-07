@@ -61,7 +61,7 @@ export default function ServicesPage() {
         "90% ventilation and natural light optimization",
       ],
       icon: <Maximize2 className="mt-1 mr-3 text-primary" size={24} />,
-      image: "/placeholder.svg?height=600&width=800",
+      image: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181645/uploads/zuqjd9qooym1v97wjti8.webp",
     },
     {
       id: "vertical-mosquito-net",
@@ -77,7 +77,7 @@ export default function ServicesPage() {
         "Professional installation for perfect fitting",
       ],
       icon: <ArrowUpDown className="mt-1 mr-3 text-primary" size={24} />,
-      image: "/placeholder.svg?height=600&width=800",
+      image: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181659/uploads/moobiiaxxjq6fxzsh6qd.webp",
     },
     {
       id: "bird-netting",
@@ -93,7 +93,7 @@ export default function ServicesPage() {
         "Professional installation with minimal disruption",
       ],
       icon: <Bird className="mt-1 mr-3 text-primary" size={24} />,
-      image: "/placeholder.svg?height=600&width=800",
+      image: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181639/uploads/gxx3vq7dzye6sdatwvjd.webp",
     },
     {
       id: "invisible-grills",
@@ -109,7 +109,7 @@ export default function ServicesPage() {
         "Professional installation with proper anchoring",
       ],
       icon: <Lock className="mt-1 mr-3 text-primary" size={24} />,
-      image: "/placeholder.svg?height=600&width=800",
+      image: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181653/uploads/vzns2zucqldv3vjpptpl.webp",
     },
     {
       id: "velcro-mosquito-net",

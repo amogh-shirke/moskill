@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-
+import { useRef } from "react"
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/src/components/ui/button"
@@ -10,6 +10,7 @@ import { Label } from "@/src/components/ui/label"
 import { Textarea } from "@/src/components/ui/textarea"
 import { useToast } from "@/src/components/ui/use-toast"
 import { Mail, MapPin, Phone } from "lucide-react"
+import emailjs from "@emailjs/browser"
 
 export default function ContactPage() {
   const { toast } = useToast()
@@ -21,6 +22,7 @@ export default function ContactPage() {
     message: "",
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const formRef = useRef<HTMLFormElement>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target
@@ -31,31 +33,49 @@ export default function ContactPage() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    setTimeout(() => {
-      toast({
-        title: "Form submitted successfully!",
-        description: "We'll get back to you as soon as possible.",
+    if (!formRef.current) return
+
+    emailjs
+      .sendForm(process.env.NEXT_PUBLIC_SERVICE_ID!, process.env.NEXT_PUBLIC_TEMPLATE_CONTACT_ID!, formRef.current, {
+        publicKey: process.env.NEXT_PUBLIC_PUBLIC_KEY!,
       })
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        message: "",
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text)
+          toast({
+            title: "Message sent successfully!",
+            description: "We'll get back to you as soon as possible.",
+          })
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            service: "",
+            message: "",
+          })
+        },
+        (error) => {
+          console.log("FAILED...", error.text)
+          toast({
+            title: "Failed to send message",
+            description: "Please try again or contact us directly.",
+            variant: "destructive",
+          })
+        },
+      )
+      .finally(() => {
+        setIsSubmitting(false)
       })
-      setIsSubmitting(false)
-    }, 1500)
   }
 
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative py-20 overflow-hidden md:py-32">
+        <div className="container relative z-10 px-4 mx-auto">
           <div className="max-w-3xl">
             <motion.h1
-              className="text-4xl md:text-5xl font-bold mb-6"
+              className="mb-6 text-4xl font-bold md:text-5xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -64,7 +84,7 @@ export default function ContactPage() {
             </motion.h1>
 
             <motion.p
-              className="text-lg md:text-xl mb-8 text-gray-100"
+              className="mb-8 text-lg text-gray-100 md:text-xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -78,19 +98,19 @@ export default function ContactPage() {
 
       {/* Contact Section */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="container px-4 mx-auto">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-white p-8 rounded-lg shadow-lg"
+              className="p-8 bg-white rounded-lg shadow-lg"
             >
-              <h2 className="text-2xl font-bold mb-6">Send Us a Message</h2>
+              <h2 className="mb-6 text-2xl font-bold">Send Us a Message</h2>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   <div className="space-y-2">
                     <Label htmlFor="name">Your Name</Label>
                     <Input
@@ -117,7 +137,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   <div className="space-y-2">
                     <Label htmlFor="phone">Phone Number</Label>
                     <Input
@@ -137,7 +157,7 @@ export default function ContactPage() {
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                      className="flex w-full h-10 px-3 py-2 text-sm border rounded-md border-input bg-background ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                       required
                     >
                       <option value="">Select a service</option>
@@ -177,15 +197,15 @@ export default function ContactPage() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
+              <h2 className="mb-6 text-2xl font-bold">Contact Information</h2>
 
               <div className="space-y-8">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-purple-600">
                     <MapPin className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-2">Our Location</h3>
+                    <h3 className="mb-2 text-lg font-semibold">Our Location</h3>
                     <p className="text-gray-600">
                       Shop No. 13, Kharkar Compound, Near Chatrapati Shivaji Maharaj Hospital, Behind HP Gas Compound,
                       Kalwa (W) - 400 605.
@@ -194,27 +214,27 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-purple-600">
                     <Phone className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-2">Phone Numbers</h3>
+                    <h3 className="mb-2 text-lg font-semibold">Phone Numbers</h3>
                     <p className="text-gray-600">9768872724 / 8898039392</p>
                   </div>
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-r from-pink-500 to-purple-600">
                     <Mail className="text-white" size={24} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold mb-2">Email Address</h3>
+                    <h3 className="mb-2 text-lg font-semibold">Email Address</h3>
                     <p className="text-gray-600">moskillnetsol@gmail.com</p>
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-semibold mb-4">Business Hours</h3>
+                  <h3 className="mb-4 text-lg font-semibold">Business Hours</h3>
                   <div className="space-y-2 text-gray-600">
                     <div className="flex justify-between">
                       <span>Monday - Friday:</span>
@@ -252,19 +272,19 @@ export default function ContactPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl p-8 md:p-12 text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Get Started?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
+        <div className="container px-4 mx-auto">
+          <div className="p-8 text-center text-white bg-gradient-to-r from-pink-500 to-purple-600 rounded-xl md:p-12">
+            <h2 className="mb-4 text-3xl font-bold md:text-4xl">Ready to Get Started?</h2>
+            <p className="max-w-2xl mx-auto mb-8 text-xl">
               Contact us today for a free consultation and quote. Let us help you protect your home with our premium
               solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
               <Button size="xl" className="bg-white text-primary hover:bg-gray-100">
-                <Phone className="mr-2 h-5 w-5" /> Call Us: 9768872724
+                <Phone className="w-5 h-5 mr-2" /> Call Us: 9768872724
               </Button>
-              <Button size="xl" className="bg-white/20 backdrop-blur-sm border-white text-white hover:bg-white/30">
-                <Mail className="mr-2 h-5 w-5" /> Email Us
+              <Button size="xl" className="text-white border-white bg-white/20 backdrop-blur-sm hover:bg-white/30">
+                <Mail className="w-5 h-5 mr-2" /> Email Us
               </Button>
             </div>
           </div>
@@ -273,4 +293,5 @@ export default function ContactPage() {
     </div>
   )
 }
+
 

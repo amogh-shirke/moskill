@@ -177,7 +177,7 @@ export default function Home() {
                 title: "Horizontal Mosquito Net",
                 description:
                   "Space-efficient, retractable, center-opening nets up to 20 feet wide. Perfect for windows and smaller openings.",
-                image: "/placeholder.svg?height=600&width=800",
+                image: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181642/uploads/ugokmsqkcnk7by6uevw2.webp",
                 icon: <Maximize2 className="text-white" size={28} />,
                 link: "/services#horizontal-mosquito-net",
               },
@@ -185,7 +185,7 @@ export default function Home() {
                 title: "Vertical Mosquito Net",
                 description:
                   "Ideal for tall windows and sliding doors. Vertical operation makes them perfect for doorways and large openings.",
-                image: "/placeholder.svg?height=600&width=800",
+                image: "https://res.cloudinary.com/du3er2t49/image/upload/v1741107632/t6uf1ih6p0rvgwh7jle0.webp",
                 icon: <ArrowUpDown className="text-white" size={28} />,
                 link: "/services#vertical-mosquito-net",
               },
@@ -193,7 +193,7 @@ export default function Home() {
                 title: "Bird Netting",
                 description:
                   "Durable and strong netting solutions that protect open spaces from birds while maintaining aesthetics.",
-                image: "/placeholder.svg?height=600&width=800",
+                image: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181636/uploads/oucruqkspskmkl3arytc.webp",
                 icon: <Bird className="text-white" size={28} />,
                 link: "/services#bird-netting",
               },
@@ -201,7 +201,7 @@ export default function Home() {
                 title: "Invisible Grills",
                 description:
                   "High-strength stainless steel grills that provide security without compromising on aesthetics or views.",
-                image: "/placeholder.svg?height=600&width=800",
+                image: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181654/uploads/ad9otjjcgvvne4kc6btf.webp",
                 icon: <Lock className="text-white" size={28} />,
                 link: "/services#invisible-grills",
               },
