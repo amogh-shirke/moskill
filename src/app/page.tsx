@@ -177,7 +177,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 z-10 bg-black/40" />
           <MosquitoNetAnimation />
-          {Array(6)
+          {Array(3)
             .fill(0)
             .map((_, i) => (
               <FloatingMosquito key={i} />
@@ -280,7 +280,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section ref={servicesRef} className="relative py-20 bg-gray-50">
+      <section ref={servicesRef} className="relative py-20 bg-gray-50 services-section">
         <div className="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none">
           <motion.div
             className="absolute right-0 top-0 w-[150%] h-[150%] bg-gradient-to-r from-transparent to-pink-500/10"
@@ -298,7 +298,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 title: "Horizontal Mosquito Net",
@@ -354,7 +354,7 @@ export default function Home() {
             ].map((service, index) => (
               <motion.div
                 key={index}
-                className="relative w-full bg-white rounded-lg shadow-lg group"
+                className="relative w-full overflow-hidden bg-white rounded-lg shadow-lg card-hover group"
                 initial={{ opacity: 0, y: 50 }}
                 animate={isServicesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}

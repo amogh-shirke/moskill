@@ -30,13 +30,13 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
-
-  .griddd {
+  
+  .grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-
+  
   .card-hover {
     width: 100%;
     margin-left: auto;
@@ -51,6 +51,11 @@
     margin-left: auto;
     margin-right: auto;
     max-width: 90%;
+  }
+  
+  /* Hide services section on mobile */
+  .services-section {
+    display: none !important;
   }
 }
 
@@ -107,24 +112,10 @@
     width: 100%;
     padding: 0;
   }
-
+  
   section[ref="servicesRef"] .grid > div {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
-  }
-}
-
-.mosquito {
-  display: inline-block;
-  animation: flyUpDown 0.5s infinite alternate ease-in-out;
-}
-
-@keyframes flyUpDown {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-5px);
   }
 }
