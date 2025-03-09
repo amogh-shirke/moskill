@@ -66,7 +66,7 @@ export function Footer() {
         <div className="pt-8 mt-12 text-center text-gray-600 border-t border-gray-200">
           <p>&copy; {new Date().getFullYear()} MOSKILL NETTING SOLUTIONS. All rights reserved.</p>
           <p>Developed by <span className="font-bold">EpicPixels</span></p>
-          <p>Contact Developer: <span className="font-medium">+91 8591103349 | ubhangare32@gmail.com</span></p>
+          <p>Contact Developer: <span className="font-medium">+91 8591103349| +91 8369429095 | ubhangare32@gmail.com</span></p>
         </div>
       </div>
     </footer>
