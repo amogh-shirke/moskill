@@ -1,5 +1,7 @@
 "use client"
 
+import "./styles.css"
+
 import { useEffect, useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -9,6 +11,117 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Button } from "@/src/components/ui/button"
 import { Shield, Star, Award, CheckCircle, Maximize2, ArrowUpDown, Bird, Lock, Layers, Paintbrush } from "lucide-react"
 import HeroSlider from "@/src/components/hero-slider"
+
+// Mosquito Net Animation Component
+const MosquitoNetAnimation = () => {
+  const netRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (netRef.current) {
+      // Animate the mosquito net mesh pattern
+      gsap.to(netRef.current.querySelectorAll(".net-line"), {
+        y: "10px",
+        stagger: 0.05,
+        repeat: -1,
+        yoyo: true,
+        duration: 2,
+        ease: "sine.inOut",
+      })
+    }
+  }, [])
+
+  return (
+    <div ref={netRef} className="absolute inset-0 z-10 overflow-hidden pointer-events-none opacity-30">
+      <div className="relative w-full h-full">
+        {Array(20)
+          .fill(0)
+          .map((_, i) => (
+            <div key={i} className="net-line absolute w-full h-[1px] bg-white/30" style={{ top: `${i * 5}%` }} />
+          ))}
+        {Array(20)
+          .fill(0)
+          .map((_, i) => (
+            <div key={i} className="net-line absolute h-full w-[1px] bg-white/30" style={{ left: `${i * 5}%` }} />
+          ))}
+      </div>
+    </div>
+  )
+}
+
+// Floating Mosquito Animation
+const FloatingMosquito = () => {
+  const mosquitoRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (mosquitoRef.current && typeof window !== "undefined") {
+      // Get viewport dimensions
+      const viewportWidth = window.innerWidth
+      const viewportHeight = window.innerHeight
+
+      // Random starting position within viewport
+      const startX = Math.random() * viewportWidth
+      const startY = Math.random() * viewportHeight
+
+      // Set initial position
+      gsap.set(mosquitoRef.current, {
+        x: startX,
+        y: startY,
+        rotation: Math.random() * 360,
+      })
+
+      // Create random flight path
+      const timeline = gsap.timeline({
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: 0.5,
+      })
+
+      // Add random movement points
+      for (let i = 0; i < 5; i++) {
+        const x = Math.random() * viewportWidth
+        const y = Math.random() * viewportHeight
+
+        timeline.to(mosquitoRef.current, {
+          x: x,
+          y: y,
+          rotation: Math.random() * 360,
+          duration: 2 + Math.random() * 3,
+          ease: "power1.inOut",
+        })
+      }
+    }
+  }, [])
+
+  return (
+    <div ref={mosquitoRef} className="absolute z-30 w-6 h-6 pointer-events-none">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g>
+          <animateTransform attributeType="XML" attributeName="transform" type="translate" values="0,0; 0,-5; 0,0" dur="0.5s" repeatCount="indefinite"/>
+          
+          {/* <!-- Body --> */}
+          <ellipse cx="12" cy="14" rx="2" ry="4" stroke="black" strokeWidth="1.5" fill="none"/>
+          <circle cx="12" cy="9" r="1.5" stroke="black" strokeWidth="1.5" fill="none"/>
+          
+          {/* <!-- Wings --> */}
+          <path d="M10 9 C5 2, 2 5, 8 12" stroke="black" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
+          <path d="M14 9 C19 2, 22 5, 16 12" stroke="black" strokeWidth="1.5" strokeLinecap="round" fill="none"/>
+          
+          {/* <!-- Legs --> */}
+          <path d="M10 16 L5 20" stroke="black" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M14 16 L19 20" stroke="black" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M10 18 L4 22" stroke="black" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M14 18 L20 22" stroke="black" strokeWidth="1.5" strokeLinecap="round"/>
+          <path d="M12 18 L12 22" stroke="black" strokeWidth="1.5" strokeLinecap="round"/>
+          
+          {/* <!-- Antennae --> */}
+          <line x1="11.5" y1="8" x2="10" y2="6" stroke="black" strokeWidth="1.5" strokeLinecap="round"/>
+          <line x1="12.5" y1="8" x2="14" y2="6" stroke="black" strokeWidth="1.5" strokeLinecap="round"/>
+        </g>
+      </svg>
+
+    </div>
+  )
+}
 
 // Register ScrollTrigger plugin
 if (typeof window !== "undefined") {
@@ -63,6 +176,12 @@ export default function Home() {
       <section ref={heroRef} className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 z-10 bg-black/40" />
+          <MosquitoNetAnimation />
+          {Array(6)
+            .fill(0)
+            .map((_, i) => (
+              <FloatingMosquito key={i} />
+            ))}
           <HeroSlider />
         </div>
 
@@ -161,8 +280,16 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section ref={servicesRef} className="py-20 bg-gray-50">
-        <div className="container px-4 mx-auto sm:px-6">
+      <section ref={servicesRef} className="relative py-20 bg-gray-50">
+        <div className="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none">
+          <motion.div
+            className="absolute right-0 top-0 w-[150%] h-[150%] bg-gradient-to-r from-transparent to-pink-500/10"
+            initial={{ x: "100%", rotate: -5 }}
+            animate={{ x: "-100%", rotate: -5 }}
+            transition={{ duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+          />
+        </div>
+        <div className="container px-4 mx-auto">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">Our Services</h2>
             <p className="max-w-2xl mx-auto text-gray-600">
@@ -171,13 +298,14 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 md:gap-8">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
             {[
               {
                 title: "Horizontal Mosquito Net",
                 description:
                   "Space-efficient, retractable, center-opening nets up to 20 feet wide. Perfect for windows and smaller openings.",
-                image: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181642/uploads/ugokmsqkcnk7by6uevw2.webp",
+                image:
+                  "https://res.cloudinary.com/du3er2t49/image/upload/v1741181642/uploads/ugokmsqkcnk7by6uevw2.webp",
                 icon: <Maximize2 className="text-white" size={28} />,
                 link: "/services#horizontal-mosquito-net",
               },
@@ -193,7 +321,8 @@ export default function Home() {
                 title: "Bird Netting",
                 description:
                   "Durable and strong netting solutions that protect open spaces from birds while maintaining aesthetics.",
-                image: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181636/uploads/oucruqkspskmkl3arytc.webp",
+                image:
+                  "https://res.cloudinary.com/du3er2t49/image/upload/v1741181636/uploads/oucruqkspskmkl3arytc.webp",
                 icon: <Bird className="text-white" size={28} />,
                 link: "/services#bird-netting",
               },
@@ -201,7 +330,8 @@ export default function Home() {
                 title: "Invisible Grills",
                 description:
                   "High-strength stainless steel grills that provide security without compromising on aesthetics or views.",
-                image: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181654/uploads/ad9otjjcgvvne4kc6btf.webp",
+                image:
+                  "https://res.cloudinary.com/du3er2t49/image/upload/v1741181654/uploads/ad9otjjcgvvne4kc6btf.webp",
                 icon: <Lock className="text-white" size={28} />,
                 link: "/services#invisible-grills",
               },
@@ -224,11 +354,18 @@ export default function Home() {
             ].map((service, index) => (
               <motion.div
                 key={index}
-                className="overflow-hidden bg-white rounded-lg shadow-lg card-hover"
+                className="relative w-full bg-white rounded-lg shadow-lg group"
                 initial={{ opacity: 0, y: 50 }}
                 animate={isServicesInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
+                whileHover={{ y: -5 }}
               >
+                <motion.div
+                  className="absolute inset-0 z-0 opacity-0 bg-gradient-to-r from-pink-500/20 to-purple-600/20"
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                  transition={{ duration: 0.3 }}
+                />
                 <div className="relative h-48 sm:h-52 md:h-60">
                   <Image src={service.image || "/placeholder.svg"} alt={service.title} fill className="object-cover" />
                 </div>
@@ -256,6 +393,16 @@ export default function Home() {
 
       {/* Product Features Section */}
       <section className="py-20 bg-white">
+        <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none opacity-5">
+          <div
+            className="w-full h-full"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(0deg, transparent, transparent 10px, #000 10px, #000 11px), repeating-linear-gradient(90deg, transparent, transparent 10px, #000 10px, #000 11px)",
+              backgroundSize: "11px 11px",
+            }}
+          ></div>
+        </div>
         <div className="container px-4 mx-auto">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">Product Features</h2>

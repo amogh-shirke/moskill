@@ -1,0 +1,130 @@
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+@keyframes netSway {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.net-line {
+  animation: netSway 3s ease-in-out infinite;
+  animation-delay: calc(var(--index) * 0.1s);
+}
+
+@media (max-width: 640px) {
+  .container {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .griddd {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card-hover {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .services-grid {
+    padding: 0 1rem;
+  }
+
+  .service-card {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+  }
+}
+
+/* Mosquito animation */
+@keyframes fly {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(10px, -15px) rotate(10deg);
+  }
+  50% {
+    transform: translate(-5px, 10px) rotate(-5deg);
+  }
+  75% {
+    transform: translate(-10px, -5px) rotate(-10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+.mosquito-animation {
+  animation: fly 8s ease-in-out infinite;
+}
+
+/* Net mesh pattern */
+.net-mesh {
+  background-size: 10px 10px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+}
+
+/* Swipe animation */
+@keyframes swipe {
+  0% {
+    transform: translateX(100%) rotate(-5deg);
+  }
+  100% {
+    transform: translateX(-100%) rotate(-5deg);
+  }
+}
+
+.swipe-animation {
+  animation: swipe 8s linear infinite;
+}
+
+/* Fix for services section on mobile */
+@media (max-width: 640px) {
+  section[ref="servicesRef"] .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 0;
+  }
+
+  section[ref="servicesRef"] .grid > div {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.mosquito {
+  display: inline-block;
+  animation: flyUpDown 0.5s infinite alternate ease-in-out;
+}
+
+@keyframes flyUpDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
