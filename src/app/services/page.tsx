@@ -7,7 +7,7 @@ import { motion, useInView } from "framer-motion"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Button } from "@/src/components/ui/button"
-import { CheckCircle, Maximize2, ArrowUpDown, Bird, Lock, Layers, Paintbrush } from 'lucide-react'
+import { CheckCircle, Maximize2, ArrowUpDown, Bird, Lock, Layers, Paintbrush, Shield, Grid } from 'lucide-react'
 
 // Register ScrollTrigger plugin
 if (typeof window !== "undefined") {
@@ -112,37 +112,39 @@ export default function ServicesPage() {
       image: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181653/uploads/vzns2zucqldv3vjpptpl.webp",
     },
     {
-      id: "velcro-mosquito-net",
-      title: "Velcro Mosquito Net",
-      description:
-        "Our velcro mosquito nets offer a simple, removable, and effective solution for insect protection. They're easy to install and remove, making them perfect for seasonal use or rental properties.",
-      features: [
-        "Easy installation with velcro attachments",
-        "Removable for cleaning or seasonal use",
-        "Custom-sized to fit your windows perfectly",
-        "High-quality mesh for durability",
-        "Cost-effective insect protection solution",
-        "Available in multiple colors to match your decor",
-      ],
-      icon: <Layers className="mt-1 mr-3 text-primary" size={24} />,
-      image: "/placeholder.svg?height=600&width=800",
-    },
-    {
-      id: "roller-blinds",
-      title: "Roller Blinds & Wallpapers",
-      description:
-        "Our roller blinds and wallpapers are stylish, customizable interior solutions that add elegance to your space while providing privacy and light control. They're perfect for enhancing the aesthetics of any room.",
-      features: [
-        "Wide range of styles, colors, and patterns",
-        "Custom-sized to fit your windows perfectly",
-        "Light filtering and blackout options available",
-        "Easy operation with chain or motorized mechanisms",
-        "Professional installation for perfect fitting",
-        "Adds style and functionality to any room",
-      ],
-      icon: <Paintbrush className="mt-1 mr-3 text-primary" size={24} />,
-      image: "/placeholder.svg?height=600&width=800",
-    },
+  id: "honeycomb-mosquito-net-pleated",
+  title: "Honeycomb with Mosquito Net (Pleated)",
+  description:
+    "A premium pleated mosquito net with a honeycomb structure, offering enhanced durability and smooth operation for doors and windows.",
+  features: [
+    "Pleated honeycomb design for superior strength",
+    "Smooth and effortless sliding mechanism",
+    "Ideal for large doors and windows",
+    "High-quality polyester mesh for insect protection",
+    "Customizable sizes and frame finishes",
+    "Weather-resistant and easy to maintain",
+  ],
+  icon: <Grid className="mt-1 mr-3 text-primary" size={24} />,
+  image:
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181642/uploads/honeycomb-mosquito-net.webp",
+},
+{
+  id: "aluminium-mosquito-net-safety",
+  title: "Aluminium Mosquito Net with Safety",
+  description:
+    "A robust aluminium-framed mosquito net designed for enhanced safety, providing protection against insects while ensuring structural durability.",
+  features: [
+    "Strong aluminium frame for added security",
+    "Available in powder-coated and anodized finishes",
+    "Rust-resistant and long-lasting build",
+    "High-density mosquito mesh for effective protection",
+    "Ideal for homes, offices, and commercial spaces",
+    "Customizable sizes to fit various openings",
+  ],
+  icon: <Shield className="mt-1 mr-3 text-primary" size={24} />,
+  image:
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181642/uploads/aluminium-mosquito-net.webp",
+},
   ]
 
   const processSteps = [
