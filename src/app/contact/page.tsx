@@ -219,7 +219,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="mb-2 text-lg font-semibold">Phone Numbers</h3>
-                    <p className="text-gray-600">9768872724 / 8898039392</p>
+                    <p className="text-gray-600 font-bold">9768872724 / 8898039392</p>
                   </div>
                 </div>
 
