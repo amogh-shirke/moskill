@@ -113,7 +113,7 @@ export default function ServicesPage() {
     },
     {
   id: "honeycomb-mosquito-net-pleated",
-  title: "Honeycomb with Mosquito Net (Pleated)",
+  title: "Honeycomb",
   description:
     "A premium pleated mosquito net with a honeycomb structure, offering enhanced durability and smooth operation for doors and windows.",
   features: [
@@ -130,7 +130,7 @@ export default function ServicesPage() {
 },
 {
   id: "aluminium-mosquito-net-safety",
-  title: "Aluminium Mosquito Net with Safety",
+  title: "Aluminium",
   description:
     "A robust aluminium-framed mosquito net designed for enhanced safety, providing protection against insects while ensuring structural durability.",
   features: [
