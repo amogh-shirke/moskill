@@ -9,7 +9,7 @@ import { motion, useInView } from "framer-motion"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Button } from "@/src/components/ui/button"
-import { Shield, Star, Award, CheckCircle, Maximize2, ArrowUpDown, Bird, Lock, Layers, Paintbrush } from "lucide-react"
+import { Shield, Star, Award, CheckCircle, Maximize2, ArrowUpDown, Bird, Lock, Layers, Paintbrush, Grid } from "lucide-react"
 import HeroSlider from "@/src/components/hero-slider"
 
 // Mosquito Net Animation Component
@@ -301,56 +301,59 @@ export default function Home() {
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "Horizontal Mosquito Net",
-                description:
-                  "Space-efficient, retractable, center-opening nets up to 20 feet wide. Perfect for windows and smaller openings.",
-                image:
-                  "https://res.cloudinary.com/du3er2t49/image/upload/v1741181642/uploads/ugokmsqkcnk7by6uevw2.webp",
-                icon: <Maximize2 className="text-white" size={28} />,
-                link: "/services#horizontal-mosquito-net",
-              },
-              {
-                title: "Vertical Mosquito Net",
-                description:
-                  "Ideal for tall windows and sliding doors. Vertical operation makes them perfect for doorways and large openings.",
-                image: "https://res.cloudinary.com/du3er2t49/image/upload/v1741107632/t6uf1ih6p0rvgwh7jle0.webp",
-                icon: <ArrowUpDown className="text-white" size={28} />,
-                link: "/services#vertical-mosquito-net",
-              },
-              {
-                title: "Bird Netting",
-                description:
-                  "Durable and strong netting solutions that protect open spaces from birds while maintaining aesthetics.",
-                image:
-                  "https://res.cloudinary.com/du3er2t49/image/upload/v1741181636/uploads/oucruqkspskmkl3arytc.webp",
-                icon: <Bird className="text-white" size={28} />,
-                link: "/services#bird-netting",
-              },
-              {
-                title: "Invisible Grills",
-                description:
-                  "High-strength stainless steel grills that provide security without compromising on aesthetics or views.",
-                image:
-                  "https://res.cloudinary.com/du3er2t49/image/upload/v1741181654/uploads/ad9otjjcgvvne4kc6btf.webp",
-                icon: <Lock className="text-white" size={28} />,
-                link: "/services#invisible-grills",
-              },
-              {
-                title: "Velcro Mosquito Net",
-                description:
-                  "Simple, removable, and effective mosquito nets with velcro attachments for easy installation and removal.",
-                image: "/placeholder.svg?height=600&width=800",
-                icon: <Layers className="text-white" size={28} />,
-                link: "/services#velcro-mosquito-net",
-              },
-              {
-                title: "Roller Blinds & Wallpapers",
-                description:
-                  "Stylish, customizable interior solutions that add elegance to your space while providing privacy and light control.",
-                image: "/placeholder.svg?height=600&width=800",
-                icon: <Paintbrush className="text-white" size={28} />,
-                link: "/services#roller-blinds",
-              },
+  title: "Horizontal Mosquito Net",
+  description:
+    "Space-efficient, retractable, center-opening nets up to 20 feet wide. Perfect for windows and smaller openings.",
+  image:
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181642/uploads/ugokmsqkcnk7by6uevw2.webp",
+  icon: <Maximize2 className="text-white" size={28} />,
+  link: "/services#horizontal-mosquito-net",
+},
+{
+  title: "Vertical Mosquito Net",
+  description:
+    "Ideal for tall windows and sliding doors. Vertical operation makes them perfect for doorways and large openings.",
+  image:
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741107632/t6uf1ih6p0rvgwh7jle0.webp",
+  icon: <ArrowUpDown className="text-white" size={28} />,
+  link: "/services#vertical-mosquito-net",
+},
+{
+  title: "Bird Netting",
+  description:
+    "Durable and strong netting solutions that protect open spaces from birds while maintaining aesthetics.",
+  image:
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181636/uploads/oucruqkspskmkl3arytc.webp",
+  icon: <Bird className="text-white" size={28} />,
+  link: "/services#bird-netting",
+},
+{
+  title: "Invisible Grills",
+  description:
+    "High-strength stainless steel grills that provide security without compromising on aesthetics or views.",
+  image:
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181654/uploads/ad9otjjcgvvne4kc6btf.webp",
+  icon: <Lock className="text-white" size={28} />,
+  link: "/services#invisible-grills",
+},
+{
+  title: "Honeycomb with Mosquito Net Pleated",
+  description:
+    "Dual-layer protection with pleated mosquito net and stylish honeycomb structure, ensuring privacy and airflow.",
+  image:
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181672/uploads/honeycomb-net-hero.webp",
+  icon: <Grid className="text-white" size={28} />,
+  link: "/services#honeycomb-mosquito-net-pleated",
+},
+{
+  title: "Aluminium Mosquito Net with Safety",
+  description:
+    "Durable aluminum frame with stainless steel mesh, offering high security and excellent ventilation.",
+  image:
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181682/uploads/aluminium-net-hero.webp",
+  icon: <Shield className="text-white" size={28} />,
+  link: "/services#aluminium-mosquito-net-safety",
+},
             ].map((service, index) => (
               <motion.div
                 key={index}
