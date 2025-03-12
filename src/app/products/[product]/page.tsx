@@ -245,6 +245,114 @@ const productData: { [key: string]: ProductData } = {
       },
     ],
   },
+  "honeycomb-mosquito-net-pleated": {
+  name: "Honeycomb with Mosquito Net Pleated",
+  tagline: "Dual-layer protection with style and efficiency",
+  heroImage: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181672/uploads/honeycomb-net-hero.webp",
+  overview:
+    "The Honeycomb with Mosquito Net Pleated is an innovative solution that combines the benefits of a pleated mosquito net with a stylish honeycomb structure. It offers dual-layer protection against insects and enhances privacy while maintaining natural airflow. Ideal for large windows, doors, and balconies, this system ensures a modern aesthetic with high functionality.",
+  features: [
+    "Dual-Layer Protection: Combines a pleated mosquito net with a honeycomb structure",
+    "Superior Insulation: Regulates temperature while keeping insects out",
+    "Stylish & Modern: Enhances aesthetics with a sleek, contemporary look",
+    "Smooth Operation: Effortless opening and closing mechanism",
+    "Customizable Sizes: Available in various dimensions to fit different spaces",
+    "Durable & Weatherproof: Resistant to dust, moisture, and wear",
+  ],
+  specifications: {
+    frameMaterial: "Aluminum (Powder-coated/Anodized Finish)",
+    meshMaterial: "Premium polyester pleated mesh",
+    meshColor: ["Black", "Grey"],
+    usage: ["Balconies", "French windows", "Sliding doors"],
+    maxSize: "Up to 20 feet width",
+  },
+  images: [
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181674/uploads/honeycomb-net-1.webp",
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181676/uploads/honeycomb-net-2.webp",
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181678/uploads/honeycomb-net-3.webp",
+  ],
+  faqs: [
+    {
+      question: "What makes the honeycomb with mosquito net pleated unique?",
+      answer:
+        "It combines a pleated mosquito net with a honeycomb structure for added insulation, privacy, and insect protection.",
+    },
+    {
+      question: "Is it suitable for all weather conditions?",
+      answer:
+        "Yes, the materials used are weather-resistant, ensuring durability and efficiency throughout the year.",
+    },
+    {
+      question: "Can I customize the size and color?",
+      answer:
+        "Yes, it is available in custom sizes and different mesh colors to match your interior.",
+    },
+    {
+      question: "How easy is it to clean and maintain?",
+      answer:
+        "It requires minimal maintenance. Regular dusting and occasional cleaning with a damp cloth are enough to keep it in great condition.",
+    },
+    {
+      question: "Can this net be installed on sliding doors?",
+      answer:
+        "Yes, it is designed for sliding doors, large windows, and balconies.",
+    },
+  ],
+},
+  "aluminium-mosquito-net-safety": {
+  name: "Aluminium Mosquito Net with Safety",
+  tagline: "Strong and secure mosquito protection for homes and offices",
+  heroImage: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181682/uploads/aluminium-net-hero.webp",
+  overview:
+    "The Aluminium Mosquito Net with Safety is designed for enhanced security and durability while keeping insects out. Made with a high-strength aluminum frame and a finely woven stainless steel mesh, it provides superior protection against mosquitoes, dust, and external elements. Ideal for residential and commercial spaces, this net ensures maximum airflow without compromising safety.",
+  features: [
+    "High-Strength Aluminum Frame: Rust-resistant and long-lasting",
+    "Stainless Steel Mesh: Strong and secure against insects and intruders",
+    "Child & Pet Safe: Durable design ensures added safety",
+    "Clear Visibility & Ventilation: Allows fresh air without obstruction",
+    "Customizable Designs: Available in various sizes and finishes",
+    "Weather & Corrosion Resistant: Ideal for all climates",
+  ],
+  specifications: {
+    frameMaterial: "Aluminum (Powder-coated/Anodized Finish)",
+    meshMaterial: "Stainless steel (SS316)",
+    meshColor: ["Black", "Grey"],
+    usage: ["Windows", "Doors", "Balconies", "Commercial buildings"],
+    maxSize: "Custom sizes available",
+  },
+  images: [
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181684/uploads/aluminium-net-1.webp",
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181686/uploads/aluminium-net-2.webp",
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181688/uploads/aluminium-net-3.webp",
+  ],
+  faqs: [
+    {
+      question: "How strong is the aluminum mosquito net?",
+      answer:
+        "The aluminum frame combined with stainless steel mesh provides high durability, making it strong enough to resist external impact.",
+    },
+    {
+      question: "Is the net rust-proof and weather-resistant?",
+      answer:
+        "Yes, the aluminum frame is powder-coated to prevent rusting, and the stainless steel mesh is resistant to corrosion and weather conditions.",
+    },
+    {
+      question: "Can I install this net on my office windows?",
+      answer:
+        "Yes, it is suitable for both residential and commercial spaces, including office windows and doors.",
+    },
+    {
+      question: "Does the net block airflow or visibility?",
+      answer:
+        "No, the fine mesh ensures excellent ventilation and clear visibility while keeping insects out.",
+    },
+    {
+      question: "Is professional installation required?",
+      answer:
+        "It is recommended for best results, but it can also be installed DIY with proper guidance.",
+    },
+  ],
+},
 };
   
 
