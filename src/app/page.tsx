@@ -568,7 +568,7 @@ export default function Home() {
             </div>
             <div>
               <h3 className="mb-2 text-4xl font-bold">
-                <span className="stat-counter" data-target="1500">
+                <span className="stat-counter" data-target="3000">
                   0
                 </span>
                 +
@@ -577,7 +577,7 @@ export default function Home() {
             </div>
             <div>
               <h3 className="mb-2 text-4xl font-bold">
-                <span className="stat-counter" data-target="3000">
+                <span className="stat-counter" data-target="3700">
                   0
                 </span>
                 +
