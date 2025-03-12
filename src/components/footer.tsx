@@ -46,7 +46,7 @@ export function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone size={18} className="text-primary" />
-                <p className="text-gray-600">9768872724 / 8898039392</p>
+                <p className="text-gray-600 font-bold">9768872724 / 8898039392</p>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail size={18} className="text-primary" />
