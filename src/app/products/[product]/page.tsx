@@ -456,7 +456,26 @@ export default function ProductPage({ params }: { params: { product: string } })
                   transition={{ duration: 0.8, delay: 0.2 * index }}
                 >
                   {isVideo ? (
-                    <video src={media} controls className="object-cover w-full h-64" width={600} height={400} />
+                    media.includes("youtube.com") || media.includes("youtu.be") ? (
+                      <iframe
+                        src={`${media.split("?")[0]}?autoplay=1&mute=1&si=${media.includes("si=") ? media.split("si=")[1] : ""}`}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="object-cover w-full h-64"
+                        width={600}
+                        height={400}
+                      />
+                    ) : (
+                      <video
+                        src={media}
+                        controls
+                        autoPlay
+                        muted
+                        className="object-cover w-full h-64"
+                        width={600}
+                        height={400}
+                      />
+                    )
                   ) : (
                     <Image
                       src={media || "/placeholder.svg"}
