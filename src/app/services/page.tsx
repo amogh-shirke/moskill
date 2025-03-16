@@ -97,7 +97,7 @@ export default function ServicesPage() {
     },
     {
       id: "invisible-grills",
-      title: "Invisible Grills (SS316)",
+      title: "Invisible Grills",
       description:
         "Our invisible grills are made from high-strength stainless steel (SS316), providing security without compromising on aesthetics or views. They're perfect for homes where traditional grills would obstruct views or clash with modern design.",
       features: [
