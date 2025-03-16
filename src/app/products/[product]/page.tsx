@@ -268,8 +268,8 @@ const productData: { [key: string]: ProductData } = {
     },
     images: [
       "https://res.cloudinary.com/du3er2t49/image/upload/v1741712849/zlni97b0u2tvks95gjxe.webp",
-      "https://res.cloudinary.com/du3er2t49/image/upload/v1741712892/zoe8qdji7umezwrn3gmo.jpg",
-      "https://res.cloudinary.com/du3er2t49/image/upload/v1741712925/rx3uqiygslcixwz4t1xt.webp ",
+      "https://res.cloudinary.com/du3er2t49/image/upload/v1741712925/rx3uqiygslcixwz4t1xt.webp",
+      "https://youtu.be/eBYmMT8qTTI?si=ahm0g-Ju5z5uYJf8",
     ],
     faqs: [
       {
@@ -319,7 +319,7 @@ const productData: { [key: string]: ProductData } = {
       maxSize: "Custom sizes available",
     },
     images: [
-      "https://res.cloudinary.com/du3er2t49/image/upload/v1741712434/dnzb36qbrnncxxlhxlmp.jpg ",
+      "https://youtu.be/IelhTi6ByF4?si=9i-yNRJdbUQpCasv ",
       "https://res.cloudinary.com/du3er2t49/image/upload/v1741712343/pnvv5tvxabra4kwk29zi.jpg ",
       "https://res.cloudinary.com/du3er2t49/image/upload/v1741711320/tocowgofj837fnfipceh.webp ",
     ],

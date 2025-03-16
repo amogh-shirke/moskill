@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["res.cloudinary.com"], // Add Cloudinary domain here
+    domains: ["res.cloudinary.com", "i.ytimg.com", "yt3.ggpht.com"], // Allow YouTube thumbnails
   },
 };
 
