@@ -26,6 +26,13 @@ type ProductData = {
   faqs: { question: string; answer: string }[]
 }
 
+function extractYouTubeVideoId(url: string): string {
+  const regex = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/;
+  const match = url.match(regex);
+  return match ? match[1] : "";
+}
+
+
 const productData: { [key: string]: ProductData } = {
   "horizontal-mosquito-net": {
     name: "Horizontal Mosquito Net",
@@ -458,7 +465,7 @@ export default function ProductPage({ params }: { params: { product: string } })
                   {isVideo ? (
                     media.includes("youtube.com") || media.includes("youtu.be") ? (
                       <iframe
-                        src={`${media.split("?")[0]}?autoplay=1&mute=1&si=${media.includes("si=") ? media.split("si=")[1] : ""}`}
+                        src={`https://www.youtube.com/embed/${extractYouTubeVideoId(media)}?autoplay=1&mute=1`}
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
                         className="object-cover w-full h-64"
