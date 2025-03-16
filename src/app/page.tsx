@@ -175,7 +175,7 @@ export default function Home() {
       {/* Hero Section */}
       <section ref={heroRef} className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 z-10 bg-black/40" />
+          <div className="absolute inset-0 z-10 bg-black/30" />
           <MosquitoNetAnimation />
           {Array(3)
             .fill(0)
