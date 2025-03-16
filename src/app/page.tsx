@@ -314,7 +314,7 @@ export default function Home() {
   description:
     "Ideal for tall windows and sliding doors. Vertical operation makes them perfect for doorways and large openings.",
   image:
-    "https://res.cloudinary.com/du3er2t49/image/upload/v1741107632/t6uf1ih6p0rvgwh7jle0.webp",
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181661/uploads/raabwdqi56xxlrvtmtai.webp",
   icon: <ArrowUpDown className="text-white" size={28} />,
   link: "/services#vertical-mosquito-net",
 },
