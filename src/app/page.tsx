@@ -341,7 +341,7 @@ export default function Home() {
   description:
     "Dual-layer protection with pleated mosquito net and stylish honeycomb structure, ensuring privacy and airflow.",
   image:
-    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181672/uploads/honeycomb-net-hero.webp",
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741712925/rx3uqiygslcixwz4t1xt.webp",
   icon: <Grid className="text-white" size={28} />,
   link: "/services#honeycomb-mosquito-net-pleated",
 },
@@ -350,7 +350,7 @@ export default function Home() {
   description:
     "Durable aluminum frame with stainless steel mesh, offering high security and excellent ventilation.",
   image:
-    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181682/uploads/aluminium-net-hero.webp",
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741712343/pnvv5tvxabra4kwk29zi.jpg ",
   icon: <Shield className="text-white" size={28} />,
   link: "/services#aluminium-mosquito-net-safety",
 },

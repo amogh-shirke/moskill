@@ -126,7 +126,7 @@ export default function ServicesPage() {
   ],
   icon: <Grid className="mt-1 mr-3 text-primary" size={24} />,
   image:
-    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181642/uploads/honeycomb-mosquito-net.webp",
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741712925/rx3uqiygslcixwz4t1xt.webp",
 },
 {
   id: "aluminium-mosquito-net-safety",
@@ -143,7 +143,7 @@ export default function ServicesPage() {
   ],
   icon: <Shield className="mt-1 mr-3 text-primary" size={24} />,
   image:
-    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181642/uploads/aluminium-mosquito-net.webp",
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741712434/dnzb36qbrnncxxlhxlmp.jpg ",
 },
   ]
 

@@ -248,7 +248,7 @@ const productData: { [key: string]: ProductData } = {
   "honeycomb-mosquito-net-pleated": {
   name: "Honeycomb with Mosquito Net Pleated",
   tagline: "Dual-layer protection with style and efficiency",
-  heroImage: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181672/uploads/honeycomb-net-hero.webp",
+  heroImage: "https://res.cloudinary.com/du3er2t49/image/upload/v1741712812/skzepp6cgdtgdwgmpbhz.webp",
   overview:
     "The Honeycomb with Mosquito Net Pleated is an innovative solution that combines the benefits of a pleated mosquito net with a stylish honeycomb structure. It offers dual-layer protection against insects and enhances privacy while maintaining natural airflow. Ideal for large windows, doors, and balconies, this system ensures a modern aesthetic with high functionality.",
   features: [
@@ -267,9 +267,9 @@ const productData: { [key: string]: ProductData } = {
     maxSize: "Up to 20 feet width",
   },
   images: [
-    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181674/uploads/honeycomb-net-1.webp",
-    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181676/uploads/honeycomb-net-2.webp",
-    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181678/uploads/honeycomb-net-3.webp",
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741712849/zlni97b0u2tvks95gjxe.webp",
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741712892/zoe8qdji7umezwrn3gmo.jpg",
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741712925/rx3uqiygslcixwz4t1xt.webp ",
   ],
   faqs: [
     {
@@ -302,7 +302,7 @@ const productData: { [key: string]: ProductData } = {
   "aluminium-mosquito-net-safety": {
   name: "Aluminium Mosquito Net with Safety",
   tagline: "Strong and secure mosquito protection for homes and offices",
-  heroImage: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181682/uploads/aluminium-net-hero.webp",
+  heroImage: "https://res.cloudinary.com/du3er2t49/image/upload/v1741711320/tocowgofj837fnfipceh.webp",
   overview:
     "The Aluminium Mosquito Net with Safety is designed for enhanced security and durability while keeping insects out. Made with a high-strength aluminum frame and a finely woven stainless steel mesh, it provides superior protection against mosquitoes, dust, and external elements. Ideal for residential and commercial spaces, this net ensures maximum airflow without compromising safety.",
   features: [
@@ -321,9 +321,9 @@ const productData: { [key: string]: ProductData } = {
     maxSize: "Custom sizes available",
   },
   images: [
-    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181684/uploads/aluminium-net-1.webp",
-    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181686/uploads/aluminium-net-2.webp",
-    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181688/uploads/aluminium-net-3.webp",
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741712434/dnzb36qbrnncxxlhxlmp.jpg ",
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741712343/pnvv5tvxabra4kwk29zi.jpg ",
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741711320/tocowgofj837fnfipceh.webp ",
   ],
   faqs: [
     {

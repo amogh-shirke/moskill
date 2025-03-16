@@ -11,6 +11,9 @@ import { QuotePopup } from "../components/quote-form"
 const inter = Playfair_Display({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/logo.png"
+  },
   title: "MOSKILL NETTING SOLUTIONS - Premium Mosquito Nets & Grills",
   description:
     "Professional mosquito nets, grills, and blinds solutions since 2011. Protect your home with our high-quality products and expert installation services.",

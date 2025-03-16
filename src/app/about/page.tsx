@@ -267,7 +267,7 @@ export default function AboutPage() {
               transition={{ duration: 0.5 }}
             >
               <div className="relative h-80">
-                <Image src="/placeholder.svg?height=400&width=400" alt="Pranay Pawar" fill className="object-cover" />
+                <Image src="https://res.cloudinary.com/du3er2t49/image/upload/v1742118260/PranayMoskill_arlb14.jpg" alt="Pranay Pawar" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="mb-1 text-xl font-bold">Pranay Pawar</h3>
@@ -300,7 +300,7 @@ export default function AboutPage() {
               </p>
               <div className="relative h-40 overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=300&width=500"
+                  src="https://res.cloudinary.com/du3er2t49/image/upload/v1742117806/zzz6nbw1qvnfogrxvqsj.jpg "
                   alt="Maharashtra Service Area"
                   fill
                   className="object-cover"
@@ -315,7 +315,7 @@ export default function AboutPage() {
               </p>
               <div className="relative h-40 overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=300&width=500"
+                  src="https://res.cloudinary.com/du3er2t49/image/upload/v1742118594/WhatsApp_Image_2025-03-16_at_15.16.18_b2273007_gvcvau.jpg"
                   alt="Goa Service Area"
                   fill
                   className="object-cover"
@@ -330,7 +330,7 @@ export default function AboutPage() {
               </p>
               <div className="relative h-40 overflow-hidden rounded-lg">
                 <Image
-                  src="/placeholder.svg?height=300&width=500"
+                  src="https://res.cloudinary.com/du3er2t49/image/upload/v1742118110/xx7r3bpcfusrwlmt2djp.png "
                   alt="Gujarat Service Area"
                   fill
                   className="object-cover"

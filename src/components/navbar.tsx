@@ -8,7 +8,7 @@ import { Button } from "@/src/components/ui/button"
 import { cn } from "@/src/lib/utils"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
-import logo from "@/src/images/logo.png"
+import logo from "@/public/favicon.ico"
 
 const navLinks = [
   { href: "/", label: "Home" },
