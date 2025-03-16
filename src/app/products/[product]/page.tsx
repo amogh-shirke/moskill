@@ -30,7 +30,7 @@ const productData: { [key: string]: ProductData } = {
   "horizontal-mosquito-net": {
     name: "Horizontal Mosquito Net",
     tagline: "Elegant and space-efficient insect protection for large openings",
-    heroImage: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181642/uploads/ugokmsqkcnk7by6uevw2.webp",
+    heroImage: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181646/uploads/f8wajlcca6zd3y6dswor.webp",
     overview:
       "The Horizontal Mosquito Net is an elegant and space-efficient solution for keeping insects out while maintaining ventilation and natural light. It is best suited for large openings such as balconies, French windows, and sliding doors. This retractable net system operates smoothly on a horizontal track, making it a user-friendly and stylish choice for modern homes, offices, and commercial spaces.",
     features: [
@@ -51,7 +51,7 @@ const productData: { [key: string]: ProductData } = {
     images: [
       "https://res.cloudinary.com/du3er2t49/image/upload/v1741181644/uploads/ruf55x4qkeotzumixwmz.webp",
       "https://res.cloudinary.com/du3er2t49/image/upload/v1741181648/uploads/t5qz8jc0ige3jfjndbx5.webp",
-      " https://res.cloudinary.com/du3er2t49/image/upload/v1741181646/uploads/f8wajlcca6zd3y6dswor.webp",
+      "https://res.cloudinary.com/du3er2t49/image/upload/v1741181642/uploads/ugokmsqkcnk7by6uevw2.webp",
     ],
     faqs: [
       {
