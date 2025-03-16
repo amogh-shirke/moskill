@@ -67,7 +67,7 @@ export function Navbar() {
               <span className="text-2xl font-bold md:text-3xl text-gradient">M</span>
               <span className="relative inline-flex items-center justify-center">
                 <Image
-                  src={logo}
+                  src={logo || "/placeholder.svg"}
                   alt="Moskill Logo"
                   width={32}
                   height={32}
@@ -89,11 +89,12 @@ export function Navbar() {
                 className="relative group"
               >
                 {link.children ? (
-                  <div>
-                    <button
-                      onClick={() => handleDropdownToggle(link.label)}
-                      className="flex items-center font-medium text-gray-800 transition-colors hover:text-primary group"
-                    >
+                  <div
+                    className="relative group"
+                    onMouseEnter={() => setActiveDropdown(link.label)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                  >
+                    <button className="flex items-center font-medium text-gray-800 transition-colors hover:text-primary group">
                       {link.label}
                       <ChevronDown
                         size={16}

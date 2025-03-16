@@ -67,9 +67,8 @@ export default function AboutPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              MOSKILL NETTING SOLUTIONS is a leading provider of high-quality mosquito nets, invisible grills, and blinds, serving Maharashtra, Goa, and Gujarat since 2011. Our mission is to deliver innovative insect protection solutions that enhance safety, comfort, and aesthetics for homes and businesses.
-              With a strong focus on premium materials and expert craftsmanship, we offer a range of products designed for durability, ease of use, and seamless integration into any space. Whether it's retractable mosquito nets, bird netting, or custom blinds, our solutions are tailored to meet diverse customer needs.
-              At MOSKILL, we prioritize customer satisfaction by ensuring a hassle-free experience, from consultation to installation. Our professional team is dedicated to delivering excellence in every project, making us a trusted choice for insect protection solutions.
+              Since 2011, we've been providing premium quality mosquito nets, grills, and blinds to homes and businesses
+              across Maharashtra, Goa, and Gujarat.
             </motion.p>
           </div>
         </div>
@@ -82,13 +81,17 @@ export default function AboutPage() {
             <div>
               <h2 className="mb-6 text-3xl font-bold">Our Legacy</h2>
               <p className="mb-4 text-gray-600">
-              Premium-Quality Products – Strong aluminum frames, durable mesh, and top-grade materials.
+                MOSKILL NETTING SOLUTIONS was founded in 2011 with a simple mission: to provide high-quality insect
+                protection solutions that effectively protect homes while maximizing ventilation and enhancing
+                aesthetics.
               </p>
               <p className="mb-4 text-gray-600">
-              Innovative Solutions – Sleek, space-saving, and retractable designs.
+                What started as a small operation in Kalwa has grown into a trusted name in the industry, serving
+                thousands of satisfied customers across Maharashtra, Goa, and Gujarat.
               </p>
               <p className="mb-4 text-gray-600">
-              Customer Satisfaction – Personalized service, expert installation, and long-term reliability.
+                Our commitment to quality, innovation, and customer satisfaction has been the cornerstone of our
+                success. We take pride in our work and strive to exceed customer expectations with every installation.
               </p>
               <div className="mt-8">
                 <Button variant="gradient" asChild>
