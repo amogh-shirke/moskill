@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import Image from "next/image"
 import { motion, useAnimation } from "framer-motion"
 import { Button } from "@/src/components/ui/button"
@@ -30,7 +30,7 @@ const productData: { [key: string]: ProductData } = {
   "horizontal-mosquito-net": {
     name: "Horizontal Mosquito Net",
     tagline: "Elegant and space-efficient insect protection for large openings",
-    heroImage: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181646/uploads/f8wajlcca6zd3y6dswor.webp",
+    heroImage: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181642/uploads/ugokmsqkcnk7by6uevw2.webp",
     overview:
       "The Horizontal Mosquito Net is an elegant and space-efficient solution for keeping insects out while maintaining ventilation and natural light. It is best suited for large openings such as balconies, French windows, and sliding doors. This retractable net system operates smoothly on a horizontal track, making it a user-friendly and stylish choice for modern homes, offices, and commercial spaces.",
     features: [
@@ -51,7 +51,7 @@ const productData: { [key: string]: ProductData } = {
     images: [
       "https://res.cloudinary.com/du3er2t49/image/upload/v1741181644/uploads/ruf55x4qkeotzumixwmz.webp",
       "https://res.cloudinary.com/du3er2t49/image/upload/v1741181648/uploads/t5qz8jc0ige3jfjndbx5.webp",
-      "https://res.cloudinary.com/du3er2t49/image/upload/v1741181642/uploads/ugokmsqkcnk7by6uevw2.webp",
+      " https://res.cloudinary.com/du3er2t49/image/upload/v1741181646/uploads/f8wajlcca6zd3y6dswor.webp",
     ],
     faqs: [
       {
@@ -81,7 +81,7 @@ const productData: { [key: string]: ProductData } = {
       },
     ],
   },
-  
+
   "vertical-mosquito-net": {
     name: "Vertical Mosquito Net",
     tagline: "Effortless and sleek mosquito protection for windows and doors",
@@ -246,120 +246,112 @@ const productData: { [key: string]: ProductData } = {
     ],
   },
   "honeycomb-mosquito-net-pleated": {
-  name: "Honeycomb with Mosquito Net Pleated",
-  tagline: "Dual-layer protection with style and efficiency",
-  heroImage: "https://res.cloudinary.com/du3er2t49/image/upload/v1741712812/skzepp6cgdtgdwgmpbhz.webp",
-  overview:
-    "The Honeycomb with Mosquito Net Pleated is an innovative solution that combines the benefits of a pleated mosquito net with a stylish honeycomb structure. It offers dual-layer protection against insects and enhances privacy while maintaining natural airflow. Ideal for large windows, doors, and balconies, this system ensures a modern aesthetic with high functionality.",
-  features: [
-    "Dual-Layer Protection: Combines a pleated mosquito net with a honeycomb structure",
-    "Superior Insulation: Regulates temperature while keeping insects out",
-    "Stylish & Modern: Enhances aesthetics with a sleek, contemporary look",
-    "Smooth Operation: Effortless opening and closing mechanism",
-    "Customizable Sizes: Available in various dimensions to fit different spaces",
-    "Durable & Weatherproof: Resistant to dust, moisture, and wear",
-  ],
-  specifications: {
-    frameMaterial: "Aluminum (Powder-coated/Anodized Finish)",
-    meshMaterial: "Premium polyester pleated mesh",
-    meshColor: ["Black", "Grey"],
-    usage: ["Balconies", "French windows", "Sliding doors"],
-    maxSize: "Up to 20 feet width",
+    name: "Honeycomb with Mosquito Net Pleated",
+    tagline: "Dual-layer protection with style and efficiency",
+    heroImage: "https://res.cloudinary.com/du3er2t49/image/upload/v1741712812/skzepp6cgdtgdwgmpbhz.webp",
+    overview:
+      "The Honeycomb with Mosquito Net Pleated is an innovative solution that combines the benefits of a pleated mosquito net with a stylish honeycomb structure. It offers dual-layer protection against insects and enhances privacy while maintaining natural airflow. Ideal for large windows, doors, and balconies, this system ensures a modern aesthetic with high functionality.",
+    features: [
+      "Dual-Layer Protection: Combines a pleated mosquito net with a honeycomb structure",
+      "Superior Insulation: Regulates temperature while keeping insects out",
+      "Stylish & Modern: Enhances aesthetics with a sleek, contemporary look",
+      "Smooth Operation: Effortless opening and closing mechanism",
+      "Customizable Sizes: Available in various dimensions to fit different spaces",
+      "Durable & Weatherproof: Resistant to dust, moisture, and wear",
+    ],
+    specifications: {
+      frameMaterial: "Aluminum (Powder-coated/Anodized Finish)",
+      meshMaterial: "Premium polyester pleated mesh",
+      meshColor: ["Black", "Grey"],
+      usage: ["Balconies", "French windows", "Sliding doors"],
+      maxSize: "Up to 20 feet width",
+    },
+    images: [
+      "https://res.cloudinary.com/du3er2t49/image/upload/v1741712849/zlni97b0u2tvks95gjxe.webp",
+      "https://res.cloudinary.com/du3er2t49/image/upload/v1741712892/zoe8qdji7umezwrn3gmo.jpg",
+      "https://res.cloudinary.com/du3er2t49/image/upload/v1741712925/rx3uqiygslcixwz4t1xt.webp ",
+    ],
+    faqs: [
+      {
+        question: "What makes the honeycomb with mosquito net pleated unique?",
+        answer:
+          "It combines a pleated mosquito net with a honeycomb structure for added insulation, privacy, and insect protection.",
+      },
+      {
+        question: "Is it suitable for all weather conditions?",
+        answer:
+          "Yes, the materials used are weather-resistant, ensuring durability and efficiency throughout the year.",
+      },
+      {
+        question: "Can I customize the size and color?",
+        answer: "Yes, it is available in custom sizes and different mesh colors to match your interior.",
+      },
+      {
+        question: "How easy is it to clean and maintain?",
+        answer:
+          "It requires minimal maintenance. Regular dusting and occasional cleaning with a damp cloth are enough to keep it in great condition.",
+      },
+      {
+        question: "Can this net be installed on sliding doors?",
+        answer: "Yes, it is designed for sliding doors, large windows, and balconies.",
+      },
+    ],
   },
-  images: [
-    "https://res.cloudinary.com/du3er2t49/image/upload/v1741712849/zlni97b0u2tvks95gjxe.webp",
-    "https://res.cloudinary.com/du3er2t49/image/upload/v1741712892/zoe8qdji7umezwrn3gmo.jpg",
-    "https://res.cloudinary.com/du3er2t49/image/upload/v1741712925/rx3uqiygslcixwz4t1xt.webp ",
-  ],
-  faqs: [
-    {
-      question: "What makes the honeycomb with mosquito net pleated unique?",
-      answer:
-        "It combines a pleated mosquito net with a honeycomb structure for added insulation, privacy, and insect protection.",
-    },
-    {
-      question: "Is it suitable for all weather conditions?",
-      answer:
-        "Yes, the materials used are weather-resistant, ensuring durability and efficiency throughout the year.",
-    },
-    {
-      question: "Can I customize the size and color?",
-      answer:
-        "Yes, it is available in custom sizes and different mesh colors to match your interior.",
-    },
-    {
-      question: "How easy is it to clean and maintain?",
-      answer:
-        "It requires minimal maintenance. Regular dusting and occasional cleaning with a damp cloth are enough to keep it in great condition.",
-    },
-    {
-      question: "Can this net be installed on sliding doors?",
-      answer:
-        "Yes, it is designed for sliding doors, large windows, and balconies.",
-    },
-  ],
-},
   "aluminium-mosquito-net-safety": {
-  name: "Aluminium Mosquito Net with Safety",
-  tagline: "Strong and secure mosquito protection for homes and offices",
-  heroImage: "https://res.cloudinary.com/du3er2t49/image/upload/v1741711320/tocowgofj837fnfipceh.webp",
-  overview:
-    "The Aluminium Mosquito Net with Safety is designed for enhanced security and durability while keeping insects out. Made with a high-strength aluminum frame and a finely woven stainless steel mesh, it provides superior protection against mosquitoes, dust, and external elements. Ideal for residential and commercial spaces, this net ensures maximum airflow without compromising safety.",
-  features: [
-    "High-Strength Aluminum Frame: Rust-resistant and long-lasting",
-    "Stainless Steel Mesh: Strong and secure against insects and intruders",
-    "Child & Pet Safe: Durable design ensures added safety",
-    "Clear Visibility & Ventilation: Allows fresh air without obstruction",
-    "Customizable Designs: Available in various sizes and finishes",
-    "Weather & Corrosion Resistant: Ideal for all climates",
-  ],
-  specifications: {
-    frameMaterial: "Aluminum (Powder-coated/Anodized Finish)",
-    meshMaterial: "Stainless steel (SS316)",
-    meshColor: ["Black", "Grey"],
-    usage: ["Windows", "Doors", "Balconies", "Commercial buildings"],
-    maxSize: "Custom sizes available",
+    name: "Aluminium Mosquito Net with Safety",
+    tagline: "Strong and secure mosquito protection for homes and offices",
+    heroImage: "https://res.cloudinary.com/du3er2t49/image/upload/v1741711320/tocowgofj837fnfipceh.webp",
+    overview:
+      "The Aluminium Mosquito Net with Safety is designed for enhanced security and durability while keeping insects out. Made with a high-strength aluminum frame and a finely woven stainless steel mesh, it provides superior protection against mosquitoes, dust, and external elements. Ideal for residential and commercial spaces, this net ensures maximum airflow without compromising safety.",
+    features: [
+      "High-Strength Aluminum Frame: Rust-resistant and long-lasting",
+      "Stainless Steel Mesh: Strong and secure against insects and intruders",
+      "Child & Pet Safe: Durable design ensures added safety",
+      "Clear Visibility & Ventilation: Allows fresh air without obstruction",
+      "Customizable Designs: Available in various sizes and finishes",
+      "Weather & Corrosion Resistant: Ideal for all climates",
+    ],
+    specifications: {
+      frameMaterial: "Aluminum (Powder-coated/Anodized Finish)",
+      meshMaterial: "Stainless steel (SS316)",
+      meshColor: ["Black", "Grey"],
+      usage: ["Windows", "Doors", "Balconies", "Commercial buildings"],
+      maxSize: "Custom sizes available",
+    },
+    images: [
+      "https://res.cloudinary.com/du3er2t49/image/upload/v1741712434/dnzb36qbrnncxxlhxlmp.jpg ",
+      "https://res.cloudinary.com/du3er2t49/image/upload/v1741712343/pnvv5tvxabra4kwk29zi.jpg ",
+      "https://res.cloudinary.com/du3er2t49/image/upload/v1741711320/tocowgofj837fnfipceh.webp ",
+    ],
+    faqs: [
+      {
+        question: "How strong is the aluminum mosquito net?",
+        answer:
+          "The aluminum frame combined with stainless steel mesh provides high durability, making it strong enough to resist external impact.",
+      },
+      {
+        question: "Is the net rust-proof and weather-resistant?",
+        answer:
+          "Yes, the aluminum frame is powder-coated to prevent rusting, and the stainless steel mesh is resistant to corrosion and weather conditions.",
+      },
+      {
+        question: "Can I install this net on my office windows?",
+        answer: "Yes, it is suitable for both residential and commercial spaces, including office windows and doors.",
+      },
+      {
+        question: "Does the net block airflow or visibility?",
+        answer: "No, the fine mesh ensures excellent ventilation and clear visibility while keeping insects out.",
+      },
+      {
+        question: "Is professional installation required?",
+        answer: "It is recommended for best results, but it can also be installed DIY with proper guidance.",
+      },
+    ],
   },
-  images: [
-    "https://res.cloudinary.com/du3er2t49/image/upload/v1741712434/dnzb36qbrnncxxlhxlmp.jpg ",
-    "https://res.cloudinary.com/du3er2t49/image/upload/v1741712343/pnvv5tvxabra4kwk29zi.jpg ",
-    "https://res.cloudinary.com/du3er2t49/image/upload/v1741711320/tocowgofj837fnfipceh.webp ",
-  ],
-  faqs: [
-    {
-      question: "How strong is the aluminum mosquito net?",
-      answer:
-        "The aluminum frame combined with stainless steel mesh provides high durability, making it strong enough to resist external impact.",
-    },
-    {
-      question: "Is the net rust-proof and weather-resistant?",
-      answer:
-        "Yes, the aluminum frame is powder-coated to prevent rusting, and the stainless steel mesh is resistant to corrosion and weather conditions.",
-    },
-    {
-      question: "Can I install this net on my office windows?",
-      answer:
-        "Yes, it is suitable for both residential and commercial spaces, including office windows and doors.",
-    },
-    {
-      question: "Does the net block airflow or visibility?",
-      answer:
-        "No, the fine mesh ensures excellent ventilation and clear visibility while keeping insects out.",
-    },
-    {
-      question: "Is professional installation required?",
-      answer:
-        "It is recommended for best results, but it can also be installed DIY with proper guidance.",
-    },
-  ],
-},
-};
-  
-
-
+}
 
 export default function ProductPage({ params }: { params: { product: string } }) {
-  const router = useRouter();
+  const router = useRouter()
   const product = productData[params.product]
   const controls = useAnimation()
 
@@ -448,23 +440,35 @@ export default function ProductPage({ params }: { params: { product: string } })
         <div className="container px-4 mx-auto">
           <h2 className="mb-12 text-4xl font-bold text-center">See It in Action</h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            {product.images.map((image, index) => (
-              <motion.div
-                key={index}
-                className="overflow-hidden rounded-lg shadow-lg"
-                initial={{ opacity: 0, y: 20 }}
-                animate={controls}
-                transition={{ duration: 0.8, delay: 0.2 * index }}
-              >
-                <Image
-                  src={image || "/placeholder.svg"}
-                  alt={`${product.name} - Image ${index + 1}`}
-                  width={600}
-                  height={400}
-                  className="object-cover w-full h-64"
-                />
-              </motion.div>
-            ))}
+            {product.images.map((media, index) => {
+              const isVideo =
+                media.trim().toLowerCase().endsWith(".mp4") ||
+                media.trim().toLowerCase().endsWith(".webm") ||
+                media.trim().toLowerCase().includes("youtube.com") ||
+                media.trim().toLowerCase().includes("youtu.be")
+
+              return (
+                <motion.div
+                  key={index}
+                  className="overflow-hidden rounded-lg shadow-lg"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={controls}
+                  transition={{ duration: 0.8, delay: 0.2 * index }}
+                >
+                  {isVideo ? (
+                    <video src={media} controls className="object-cover w-full h-64" width={600} height={400} />
+                  ) : (
+                    <Image
+                      src={media || "/placeholder.svg"}
+                      alt={`${product.name} - Image ${index + 1}`}
+                      width={600}
+                      height={400}
+                      className="object-cover w-full h-64"
+                    />
+                  )}
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -625,12 +629,7 @@ export default function ProductPage({ params }: { params: { product: string } })
             your home or business.
           </p>
           <div className="flex flex-col items-center justify-center gap-6 sm:flex-row">
-            <Button
-              size="lg"
-              variant="secondary"
-              onClick={() => router.push("/contact")}
-              className="px-8 py-4 text-lg"
-            >
+            <Button size="lg" variant="secondary" onClick={() => router.push("/contact")} className="px-8 py-4 text-lg">
               Request a Free Quote
             </Button>
             <Button
