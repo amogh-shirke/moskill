@@ -85,7 +85,7 @@ const productData: { [key: string]: ProductData } = {
   "vertical-mosquito-net": {
     name: "Vertical Mosquito Net",
     tagline: "Effortless and sleek mosquito protection for windows and doors",
-    heroImage: " https://res.cloudinary.com/du3er2t49/image/upload/v1741181655/uploads/enadthf13xqb90jaci2y.webp",
+    heroImage: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181659/uploads/moobiiaxxjq6fxzsh6qd.webp",
     overview:
       "The Vertical Mosquito Net is designed for easy operation and seamless integration into modern interiors. Ideal for windows and small openings, this net features a rolling mechanism that allows you to pull it down when needed and retract it effortlessly when not in use. Its durable mesh ensures long-term protection against insects while allowing natural airflow.",
     features: [
@@ -105,7 +105,7 @@ const productData: { [key: string]: ProductData } = {
     },
     images: [
       "https://res.cloudinary.com/du3er2t49/image/upload/v1741181657/uploads/syzbxk2ps2hxphu2du77.webp",
-      "https://res.cloudinary.com/du3er2t49/image/upload/v1741181659/uploads/moobiiaxxjq6fxzsh6qd.webp",
+      "https://res.cloudinary.com/du3er2t49/image/upload/v1741181655/uploads/enadthf13xqb90jaci2y.webp",
       "https://res.cloudinary.com/du3er2t49/image/upload/v1741181661/uploads/raabwdqi56xxlrvtmtai.webp",
     ],
     faqs: [
@@ -213,7 +213,7 @@ const productData: { [key: string]: ProductData } = {
       maxSize: "Customizable as per requirement",
     },
     images: [
-      " https://res.cloudinary.com/du3er2t49/image/upload/v1741181650/uploads/sqpxgppb2vja11aamxek.webp",
+      "https://res.cloudinary.com/du3er2t49/image/upload/v1741181650/uploads/sqpxgppb2vja11aamxek.webp",
       "https://res.cloudinary.com/du3er2t49/image/upload/v1741181652/uploads/k5wewqochsnwjr3q0w3d.webp",
       "https://res.cloudinary.com/du3er2t49/image/upload/v1741181653/uploads/vzns2zucqldv3vjpptpl.webp",
     ],
