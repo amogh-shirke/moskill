@@ -11,6 +11,10 @@ import { Textarea } from "@/src/components/ui/textarea"
 import { useToast } from "@/src/components/ui/use-toast"
 import { Mail, MapPin, Phone } from "lucide-react"
 import emailjs from "@emailjs/browser"
+import { Roboto_Mono } from "next/font/google";
+
+const robotoMono = Roboto_Mono({ weight: "700", subsets: ["latin"] });
+
 
 export default function ContactPage() {
   const { toast } = useToast()
@@ -219,7 +223,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="mb-2 text-lg font-semibold">Phone Numbers</h3>
-                    <p className="text-gray-600 font-bold">9768872724 / 8898039392</p>
+                    <p className={`text-gray-600 ${robotoMono.className}`}>9768872724 / 8898039392</p>
                   </div>
                 </div>
 
