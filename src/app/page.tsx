@@ -193,7 +193,7 @@ export default function Home() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              Premium Mosquito Nets & Insect Protection Solutions
+              Premium Mosquito & Invisible Net Protection for Your Family
             </motion.h1>
 
             <motion.p
@@ -319,15 +319,6 @@ export default function Home() {
   link: "/services#vertical-mosquito-net",
 },
 {
-  title: "Bird Netting",
-  description:
-    "Durable and strong netting solutions that protect open spaces from birds while maintaining aesthetics.",
-  image:
-    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181636/uploads/oucruqkspskmkl3arytc.webp",
-  icon: <Bird className="text-white" size={28} />,
-  link: "/services#bird-netting",
-},
-{
   title: "Invisible Grills",
   description:
     "High-strength stainless steel grills that provide security without compromising on aesthetics or views.",
@@ -335,6 +326,15 @@ export default function Home() {
     "https://res.cloudinary.com/du3er2t49/image/upload/v1741181654/uploads/ad9otjjcgvvne4kc6btf.webp",
   icon: <Lock className="text-white" size={28} />,
   link: "/services#invisible-grills",
+},
+{
+  title: "Bird Netting",
+  description:
+    "Durable and strong netting solutions that protect open spaces from birds while maintaining aesthetics.",
+  image:
+    "https://res.cloudinary.com/du3er2t49/image/upload/v1741181636/uploads/oucruqkspskmkl3arytc.webp",
+  icon: <Bird className="text-white" size={28} />,
+  link: "/services#bird-netting",
 },
 {
   title: "Honeycomb with Mosquito Net Pleated",

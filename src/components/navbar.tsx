@@ -18,8 +18,8 @@ const navLinks = [
     children: [
       { href: "/products/horizontal-mosquito-net", label: "Horizontal Mosquito Net" },
       { href: "/products/vertical-mosquito-net", label: "Vertical Mosquito Net" },
-      { href: "/products/bird-netting", label: "Bird Netting" },
       { href: "/products/invisible-grills", label: "Invisible Grills" },
+      { href: "/products/bird-netting", label: "Bird Netting" },
       { href: "/products/honeycomb-mosquito-net-pleated", label: "Honeycomb with Mosquito Net Pleated" },
       { href: "/products/aluminium-mosquito-net-safety", label: "Aluminium Mosquito Net with Safety" },
     ],

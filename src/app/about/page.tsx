@@ -68,7 +68,7 @@ export default function AboutPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               Since 2011, we've been providing premium quality mosquito nets, grills, and blinds to homes and businesses
-              across Maharashtra, Goa, and Gujarat.
+              across all over India.
             </motion.p>
           </div>
         </div>
@@ -81,17 +81,13 @@ export default function AboutPage() {
             <div>
               <h2 className="mb-6 text-3xl font-bold">Our Legacy</h2>
               <p className="mb-4 text-gray-600">
-                MOSKILL NETTING SOLUTIONS was founded in 2011 with a simple mission: to provide high-quality insect
-                protection solutions that effectively protect homes while maximizing ventilation and enhancing
-                aesthetics.
+                MOSKILL NETTING SOLUTIONS was founded in 2011 with a simple mission: to provide high-quality mosquito nets and invisible net protection solutions that effectively safeguard homes while maximizing ventilation and enhancing aesthetics.
               </p>
               <p className="mb-4 text-gray-600">
-                What started as a small operation in Kalwa has grown into a trusted name in the industry, serving
-                thousands of satisfied customers across Maharashtra, Goa, and Gujarat.
+                What started as a small operation in Kalwa has grown into a trusted name in the industry, serving thousands of satisfied customers across Maharashtra, Goa, and Gujarat.
               </p>
               <p className="mb-4 text-gray-600">
-                Our commitment to quality, innovation, and customer satisfaction has been the cornerstone of our
-                success. We take pride in our work and strive to exceed customer expectations with every installation.
+                Our commitment to quality, innovation, and customer satisfaction has been the cornerstone of our success. We take pride in our work and strive to exceed customer expectations with every installation.
               </p>
               <div className="mt-8">
                 <Button variant="gradient" asChild>
@@ -252,7 +248,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section ref={teamRef} className="py-20 bg-gray-50">
+      {/* <section ref={teamRef} className="py-20 bg-gray-50">
         <div className="container px-4 mx-auto">
           <div className="mb-16 text-center">
             <h2 className="mb-4 text-3xl font-bold md:text-4xl">Our Team</h2>
@@ -280,7 +276,7 @@ export default function AboutPage() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Service Area Section */}
       <section className="py-20 bg-white">

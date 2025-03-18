@@ -80,22 +80,6 @@ export default function ServicesPage() {
       image: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181659/uploads/moobiiaxxjq6fxzsh6qd.webp",
     },
     {
-      id: "bird-netting",
-      title: "Bird Netting",
-      description:
-        "Our bird netting solutions are durable and strong, designed to protect open spaces from birds while maintaining aesthetics. They're perfect for balconies, terraces, and other open areas where bird intrusion is a concern.",
-      features: [
-        "High-strength netting that's virtually invisible from a distance",
-        "UV-resistant materials for outdoor durability",
-        "Custom installation for any space or area",
-        "Maintains aesthetics while providing protection",
-        "Humane bird deterrent solution",
-        "Professional installation with minimal disruption",
-      ],
-      icon: <Bird className="mt-1 mr-3 text-primary" size={24} />,
-      image: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181639/uploads/gxx3vq7dzye6sdatwvjd.webp",
-    },
-    {
       id: "invisible-grills",
       title: "Invisible Grills",
       description:
@@ -110,6 +94,22 @@ export default function ServicesPage() {
       ],
       icon: <Lock className="mt-1 mr-3 text-primary" size={24} />,
       image: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181653/uploads/vzns2zucqldv3vjpptpl.webp",
+    },
+    {
+      id: "bird-netting",
+      title: "Bird Netting",
+      description:
+        "Our bird netting solutions are durable and strong, designed to protect open spaces from birds while maintaining aesthetics. They're perfect for balconies, terraces, and other open areas where bird intrusion is a concern.",
+      features: [
+        "High-strength netting that's virtually invisible from a distance",
+        "UV-resistant materials for outdoor durability",
+        "Custom installation for any space or area",
+        "Maintains aesthetics while providing protection",
+        "Humane bird deterrent solution",
+        "Professional installation with minimal disruption",
+      ],
+      icon: <Bird className="mt-1 mr-3 text-primary" size={24} />,
+      image: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181639/uploads/gxx3vq7dzye6sdatwvjd.webp",
     },
     {
   id: "honeycomb-mosquito-net-pleated",

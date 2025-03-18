@@ -39,7 +39,7 @@ const productData: { [key: string]: ProductData } = {
     tagline: "Elegant and space-efficient insect protection for large openings",
     heroImage: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181646/uploads/f8wajlcca6zd3y6dswor.webp",
     overview:
-      "The Horizontal Mosquito Net is an elegant and space-efficient solution for keeping insects out while maintaining ventilation and natural light. It is best suited for large openings such as balconies, French windows, and sliding doors. This retractable net system operates smoothly on a horizontal track, making it a user-friendly and stylish choice for modern homes, offices, and commercial spaces.",
+      "The Horizontal Mosquito Net is an elegant and space-efficient solution for keeping insects out while maintaining ventilation and natural light. It is best suited for large openings such as balconies, French windows, sliding and openable doors and windows. This retractable net system operates smoothly on a horizontal track, making it a user-friendly and stylish choice for modern homes, offices, and commercial spaces.",
     features: [
       "Retractable Design: Slides horizontally with minimal effort, easy to open and close",
       "Premium Material: High-quality aluminum frame with special polyester mesh",
@@ -47,6 +47,9 @@ const productData: { [key: string]: ProductData } = {
       "Weatherproof & Dust-Resistant: Ideal for all climates",
       "Customizable Size & Finish: Various colors, dimensions, and frame finishes available",
       "Maximum Airflow & Visibility: Ensures a comfortable living experience",
+      "Fits Minimum Size & Matches Color: Can be customized to fit even the smallest windows and match existing color schemes",
+      "Single Track Installation: Can be fitted on a single track and cover the entire window",
+      "Universal Compatibility: Can be installed on any type of window"
     ],
     specifications: {
       frameMaterial: "Aluminum (Powder-coated/Anodized/Wooden Finish)",
@@ -84,7 +87,7 @@ const productData: { [key: string]: ProductData } = {
       {
         question: "Can the horizontal mosquito net be installed on all types of windows and doors?",
         answer:
-          "Our horizontal mosquito nets are versatile and can be installed on most types of windows and doors, including sliding doors, French windows, and large balcony openings. During the consultation, our experts will assess your specific requirements and recommend the best installation method for your space.",
+          "Our horizontal mosquito nets are versatile and can be installed all types of windows and doors, including sliding doors, French windows, and large balcony openings. During the consultation, our experts will assess your specific requirements and recommend the best installation method for your space.",
       },
     ],
   },
@@ -203,20 +206,27 @@ const productData: { [key: string]: ProductData } = {
     tagline: "Modern and secure alternative to traditional safety grills",
     heroImage: "https://res.cloudinary.com/du3er2t49/image/upload/v1741181649/uploads/y0qo2q7qdtvzsryfuhyy.webp",
     overview:
-      "Invisible Grills provide a sleek and modern safety solution for balconies, windows, and open areas. Made from high-strength stainless steel cables, these grills offer maximum safety without obstructing the view. Designed for residential and commercial properties, invisible grills provide security while maintaining aesthetic appeal. They are rust-resistant, easy to maintain, and highly durable, making them an ideal alternative to bulky iron grills.",
+      "Invisible Grills provide a sleek and modern safety solution for balconies, windows, and open areas. Made from high-strength stainless steel cables, these grills offer maximum safety without obstructing the view. Designed for residential and commercial properties, invisible grills provide security while maintaining aesthetic appeal. They are rust-resistant, lightweight (putting less weight on windows), easy to maintain, and highly durable, making them an ideal alternative to bulky iron grills.",
     features: [
       "Unobstructed panoramic view with a minimalist design",
       "High-tensile strength stainless steel cables for maximum safety",
-      "Rust-resistant and weatherproof for long-lasting durability",
+      "Rust-resistant, weatherproof, and lightweight for less strain on windows",
       "Customizable installation for balconies, windows, and open areas",
       "Low maintenance and easy to clean",
       "Child and pet-friendly design with no sharp edges",
     ],
     specifications: {
-      frameMaterial: "Aluminum frame with high-tensile stainless steel cables",
-      meshMaterial: "Stainless steel cables (coated for durability)",
+      frameMaterial:
+        "Aluminum strong profile with high-tensile stainless steel cables",
+      meshMaterial: "SS 304/316 - 2.5 mm Nylon Coated Wire (Imported)",
       meshColor: ["Metallic Silver"],
-      usage: ["Balconies", "Windows", "High-rise apartments", "Commercial spaces"],
+      usage: [
+        "Balconies",
+        "Windows",
+        "High-rise apartments",
+        "Penthouse",
+        "Commercial spaces",
+      ],
       maxSize: "Customizable as per requirement",
     },
     images: [
@@ -228,7 +238,7 @@ const productData: { [key: string]: ProductData } = {
       {
         question: "Are invisible grills strong enough to ensure safety?",
         answer:
-          "Yes, our invisible grills use high-tensile strength stainless steel cables that can withstand high pressure, ensuring safety for residents.",
+          "Yes, our invisible grills use high-tensile strength stainless steel cables and strong aluminium profile that can withstand high pressure, ensuring safety for residents.",
       },
       {
         question: "Can invisible grills be installed on all types of balconies and windows?",
@@ -246,10 +256,9 @@ const productData: { [key: string]: ProductData } = {
           "Yes, the stainless steel cables are coated to prevent rusting and corrosion, making them suitable for long-term outdoor use.",
       },
       {
-        question: "Can invisible grills be removed if needed?",
-        answer:
-          "Yes, invisible grills can be removed if necessary, but professional assistance is recommended for proper handling and reinstallation.",
-      },
+        question:"What are the specifications of the SS 304 nylon-coated wire system?",
+        answer:"The SS 304 system consists of a 2.5 mm nylon-coated imported wire with a 2-inch vertical spacing between wires. It includes aluminum top and bottom sections with a white powder-coated cover profile, plastic rollers, SS 304 washers and fixing screws, and SS 316 four-way stiffeners. For installation, SS 304 - 3” concrete fasteners are used for RCC structures or as per requirements, along with aluminum rivets for securing the cover to the section."
+      }
     ],
   },
   "honeycomb-mosquito-net-pleated": {
