@@ -8,6 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Button } from "@/src/components/ui/button"
 import Link from "next/link"
 import { CheckCircle, Users, Clock, Award, Shield, Globe } from "lucide-react"
+import { Metadata } from "next"
 
 // Register ScrollTrigger plugin
 if (typeof window !== "undefined") {

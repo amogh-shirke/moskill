@@ -12,6 +12,8 @@ import { Button } from "@/src/components/ui/button"
 import { Shield, Star, Award, CheckCircle, Maximize2, ArrowUpDown, Bird, Lock, Layers, Paintbrush, Grid } from "lucide-react"
 import HeroSlider from "@/src/components/hero-slider"
 
+
+
 // Mosquito Net Animation Component
 const MosquitoNetAnimation = () => {
   const netRef = useRef<HTMLDivElement>(null)

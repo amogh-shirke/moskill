@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.moskillnettingsolutions.com
+
+# Sitemaps
+Sitemap: https://www.moskillnettingsolutions.com/sitemap.xml

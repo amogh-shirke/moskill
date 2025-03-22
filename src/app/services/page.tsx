@@ -8,6 +8,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Button } from "@/src/components/ui/button"
 import { CheckCircle, Maximize2, ArrowUpDown, Bird, Lock, Layers, Paintbrush, Shield, Grid } from 'lucide-react'
+import { Metadata } from "next"
 
 // Register ScrollTrigger plugin
 if (typeof window !== "undefined") {

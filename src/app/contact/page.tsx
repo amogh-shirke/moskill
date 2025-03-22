@@ -12,9 +12,9 @@ import { useToast } from "@/src/components/ui/use-toast"
 import { Mail, MapPin, Phone } from "lucide-react"
 import emailjs from "@emailjs/browser"
 import { Roboto_Mono } from "next/font/google";
+import { Metadata } from "next"
 
 const robotoMono = Roboto_Mono({ weight: "700", subsets: ["latin"] });
-
 
 export default function ContactPage() {
   const { toast } = useToast()

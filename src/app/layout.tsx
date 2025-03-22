@@ -10,14 +10,58 @@ import { QuotePopup } from "../components/quote-form"
 // const inter = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
 const inter = Playfair_Display({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
 
-export const metadata: Metadata = {
-  icons: {
-    icon: "/favicon.ico"
+export const metadata = {
+  title: {
+    default: "Moskill Netting Solutions | Best Mosquito Nets & Invisible Grills",
+    template: "%s | Moskill Netting",
   },
-  title: "MOSKILL NETTING SOLUTIONS - Premium Mosquito Nets & Grills",
-  description:
-    "Professional mosquito nets, grills, and blinds solutions since 2011. Protect your home with our high-quality products and expert installation services.",
+  description: "Get premium mosquito nets and invisible grills in Mumbai, Maharashtra, Goa, and Gujarat. High-quality, durable, and affordable solutions for homes & offices.",
+  keywords: [
+    "Mosquito Net",
+    "Invisible Grills",
+    "Mosquito Net for Windows",
+    "Bird Netting",
+    "Retractable Mosquito Nets",
+    "Balcony Netting",
+    "Window Mosquito Mesh",
+    "Stainless Steel Grills",
+    "Sliding Mosquito Nets",
+    "Mosquito Net Installation in Mumbai",
+    "Best Mosquito Netting Services",
+    "Safety Grills for Windows",
+    "Pigeon Netting for Balconies",
+  ],
+  alternates: {
+    canonical: "https://www.moskillnettingsolutions.com",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "Best Mosquito Netting & Invisible Grills | Moskill Netting Solutions",
+    description: "Moskill Netting Solutions provides high-quality mosquito nets and invisible grills for homes and offices in Mumbai, Maharashtra, Goa, and Gujarat.",
+    url: "https://www.moskillnettingsolutions.com",
+    type: "website",
+    siteName: "Moskill Netting Solutions",
+    images: [
+      {
+        url: "/favicon.ico", // Replace with actual image
+        width: 1200,
+        height: 630,
+        alt: "Moskill Netting Solutions - Best Mosquito Nets and Invisible Grills",
+      },
+    ],
+  },
+  authors: [
+    { name: "Moskill Netting Solutions", url: "https://www.moskillnettingsolutions.com" },
+  ],
+  icons: {
+    icon: "/favicon.ico",
+  },
 }
+
+
 
 export default function RootLayout({
   children,

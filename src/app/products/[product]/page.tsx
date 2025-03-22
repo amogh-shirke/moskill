@@ -8,6 +8,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { QuotePopup } from "@/src/components/quote-form"
 import { CheckCircle, Phone, Star } from "lucide-react"
 import { useRouter } from "next/navigation"
+import { Metadata } from "next"
 
 type ProductData = {
   name: string
@@ -25,6 +26,7 @@ type ProductData = {
   images: string[]
   faqs: { question: string; answer: string }[]
 }
+
 
 function extractYouTubeVideoId(url: string): string {
   const regex = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/;
