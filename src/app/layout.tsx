@@ -6,6 +6,7 @@ import { Navbar } from "@/src/components/navbar"
 import { Footer } from "@/src/components/footer"
 import { Toaster } from "@/src/components/ui/toaster"
 import { QuotePopup } from "../components/quote-form"
+import Script from "next/script"
 
 // const inter = Bebas_Neue({ subsets: ["latin"], weight: ["400"] });
 const inter = Playfair_Display({ subsets: ["latin"], weight: ["400", "500", "600", "700"] });
@@ -70,6 +71,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16959411468"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16959411468');
+          `}
+        </Script>
+      </head>
       <body className={`${inter.className} min-h-screen bg-gradient-to-br from-pink-400 via-purple-500 to-pink-500`}>
         <div className="flex flex-col min-h-screen ">
           <Navbar />
